@@ -1,11 +1,18 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <>
-      <h1>Title</h1>
-      <p>Paragraph</p>
-    </>
+    <BrowserRouter>
+      <div>
+        <Footer />
+      </div>
+      <div className="container-fluid">
+        <Routes>{/*<Route path="/" element={<Home />} />*/}</Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
