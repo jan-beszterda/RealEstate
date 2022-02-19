@@ -6,11 +6,28 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  color: #fffffe !important;
+  background-color: #fffffe !important;
+  color: #000000 !important;
   font-size: 1.2rem;
-  font-weight: 400;
 }
 
-footer > ul > li > a:hover {
-  text-shadow: -5px 5px 4px rgba(0, 0, 0, 0.25);
+footer {
+  background-color: #d3d3d3 !important;
+  max-height: 100px !important;
+  font-size: 0.6rem !important;
+}
+
+footer > div > p {
+  font-size: 0.4rem !important;
+  letter-spacing: 1px !important;
+}
+
+.nav-link {
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  color: #000000 !important;
+}
+
+.nav-link:hover {
+  text-decoration: underline !important;
 }
