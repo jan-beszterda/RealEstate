@@ -31,3 +31,8 @@ footer > div > p {
 .nav-link:hover {
   text-decoration: underline !important;
 }
+
+.section-grey {
+  background-color: rgba(211, 211, 211, 0.75);
+  border-radius: 15px;
+}
