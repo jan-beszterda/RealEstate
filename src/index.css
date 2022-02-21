@@ -36,3 +36,30 @@ footer > div > p {
   background-color: rgba(211, 211, 211, 0.75);
   border-radius: 15px;
 }
+
+.btn-primary {
+  transition-duration: 0.4s !important;
+  background-color: #baa360 !important;
+  border: 1px solid #baa360 !important;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+  background-color: #baa360 !important;
+  border: 1px solid #baa360 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+
+.btn-primary:hover {
+  background-color: #fffffe !important;
+  color: #000000 !important;
+  border: 1px solid #baa360 !important;
+}
+
+.contact-form {
+  background-color: #d3d3d3;
+  border-radius: 15px;
+}
