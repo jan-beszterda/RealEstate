@@ -24,7 +24,7 @@ const ContactUs = () => {
           <p className="text-center">Hej</p>
           <p className="text-center">Hej</p>
         </Section>
-        <div class="w-100 d-block d-md-none"></div>
+        <div className="w-100 d-block d-md-none"></div>
         <Section
           className={
             "col-2 d-flex flex-column justify-content-center align-self-center"
@@ -34,7 +34,7 @@ const ContactUs = () => {
           <p className="text-center">Hej</p>
           <p className="text-center">Hej</p>
         </Section>
-        <div class="w-100 d-block d-md-none"></div>
+        <div className="w-100 d-block d-md-none"></div>
         <Section
           className={
             "col-2 d-flex flex-column justify-content-center align-self-center"
@@ -44,7 +44,7 @@ const ContactUs = () => {
           <p className="text-center">Hej</p>
           <p className="text-center">Hej</p>
         </Section>
-        <div class="w-100 d-block d-md-none"></div>
+        <div className="w-100 d-block d-md-none"></div>
         <div className="col">
           <ContactForm />
         </div>
