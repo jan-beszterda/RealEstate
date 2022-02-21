@@ -45,7 +45,7 @@ const ContactUs = () => {
           <p className="text-center">Hej</p>
         </Section>
         <div className="w-100 d-block d-md-none"></div>
-        <div className="col">
+        <div className="col d-flex flex-column justify-content-center">
           <ContactForm />
         </div>
       </div>

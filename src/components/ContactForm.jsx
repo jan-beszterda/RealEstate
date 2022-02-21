@@ -32,6 +32,9 @@ const ContactForm = () => {
       setEmail("");
       setMessage("");
       setSuccess(true);
+      setTimeout(() => {
+        setSuccess(false);
+      }, 1000);
     }
   };
 
@@ -40,85 +43,68 @@ const ContactForm = () => {
   }, [contacts]);
 
   return (
-    <div className="container-sm contact-form py-2">
-      <form onSubmit={handleSubmit}>
-        <div className="row mb-1 mx-2">
-          <label className="form-label px-0" htmlFor="firstName">
+    <>
+      {!success ? (
+        <form className="contact-form p-3" onSubmit={handleSubmit}>
+          <label className="form-label mb-1" htmlFor="firstName">
             Förnamn
           </label>
-        </div>
-        <div className="row mb-4 mx-2">
           <input
-            className="form-control"
+            className="form-control mb-4"
             name="firstName"
             type="text"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
           />
-        </div>
-        <div className="row mb-1 mx-2">
-          <label className="form-label px-0" htmlFor="lastName">
+          <label className="form-label mb-1" htmlFor="lastName">
             Efternamn
           </label>
-        </div>
-        <div className="row mb-4 mx-2">
           <input
-            className="form-control"
+            className="form-control mb-4"
             name="lastName"
             type="text"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
           />
-        </div>
-        <div className="row mb-1 mx-2">
-          <label className="form-label px-0" htmlFor="phone">
+          <label className="form-label mb-1" htmlFor="phone">
             Telefon
           </label>
-        </div>
-        <div className="row mb-4 mx-2">
           <input
-            className="form-control"
+            className="form-control mb-4"
             name="phone"
             type="tel"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
           />
-        </div>
-        <div className="row mb-1 mx-2">
-          <label className="form-label px-0" htmlFor="email">
+          <label className="form-label mb-1" htmlFor="email">
             Email
           </label>
-        </div>
-        <div className="row mb-4 mx-2">
           <input
-            className="form-control"
+            className="form-control mb-4"
             name="email"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-        </div>
-        <div className="row mb-1 mx-2">
-          <label className="form-label px-0" htmlFor="message">
+          <label className="form-label mb-1" htmlFor="message">
             Frågor
           </label>
-        </div>
-        <div className="row mb-4 mx-2">
           <textarea
-            className="form-control"
+            className="form-control mb-4"
             name="message"
             type="text"
             rows={5}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
-        </div>
-        <Button className="btn btn-primary ms-2" type="submit">
-          Skicka
-        </Button>
-      </form>
-      {success && <div>Thank you for your message</div>}
-    </div>
+          <Button className="btn btn-primary" type="submit">
+            Skicka
+          </Button>
+        </form>
+      ) : (
+        <span className="text-center">Thank you for your message</span>
+      )}
+    </>
   );
 };
 
