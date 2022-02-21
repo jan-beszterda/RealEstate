@@ -1,7 +1,12 @@
 import React from "react";
+import ContactUs from "./components/ContactUs";
 
 function App() {
-  return <div className="container"></div>;
+  return (
+    <main className="container-sm my-3">
+      <ContactUs />
+    </main>
+  );
 }
 
 export default App;
