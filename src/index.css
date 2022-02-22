@@ -69,3 +69,17 @@ footer > div > p {
   box-shadow: none !important;
   outline: 0 !important;
 }
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 30vh;
+  width: 30vw;
+  background-color: rgba(211, 211, 211, 0.8);
+  border-radius: 15px;
+  position: relative;
+  top: -50%;
+  left: -50%;
+}
