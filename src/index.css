@@ -152,3 +152,16 @@ footer > div > p {
   background: #baa360;
   border-radius: 15px;
 }
+
+.username-enter {
+  position: relative;
+  left: 750px;
+  top: 110px;
+  background: red;
+}
+.password-enter {
+  position: relative;
+  left: 850px;
+  top: 110px;
+  background: red;
+}
