@@ -1,10 +1,10 @@
 import React from "react";
-import ContactForm from "./components/ContactForm";
+import BookingForm from "./components/BookingForm";
 
 function App() {
   return (
     <div className="container">
-      <ContactForm />
+      <BookingForm />
     </div>
   );
 }
