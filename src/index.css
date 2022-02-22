@@ -39,3 +39,22 @@ body {
   background-color: #d3d3d3;
   padding: 30px;
 }
+
+.service-container {
+  background-color: pink;
+  padding: 30px;
+}
+
+.service-headerContainer {
+  background-color: blue;
+}
+
+.service-smallHeaderContainer {
+  background-color: yellow;
+}
+
+.service-paraContainer {
+  background-color: purple;
+  display: flex;
+  justify-content: center;
+}
