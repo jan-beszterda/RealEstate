@@ -64,6 +64,23 @@ footer > div > p {
   border-radius: 15px;
 }
 
+
+.booking-form {
+  background-color: #d3d3d3;
+  padding: 30px;
+}
+
+.service-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-paraContainer {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  
 .form-control:focus {
   border: 2px solid #baa360 !important;
   box-shadow: none !important;
