@@ -34,7 +34,7 @@ const [Close, SetClose] = useState(true)
 </div>
    <li>Bathrooms</li>
    <div class="slidecontainer">
-  <input type="range" min="1" max="100" value="50" class="bathroom-slider" id="bathroom-range"></input>
+  <input type="range" min="1" max="100" value="51" class="bathroom-slider" id="bathroom-range"></input>
 </div>
    
    
