@@ -165,3 +165,38 @@ footer > div > p {
   top: 110px;
   background: red;
 }
+
+.succses-msg {
+  position: relative;
+  left: 950px;
+  top: 220px;
+  color: green;
+}
+
+.filter-container {
+  position: relative;
+  width: 223px;
+  height: 400px;
+  left: -80px;
+  top: 15px;
+  background-color: #d3d3d3;
+}
+
+.close-filter {
+  position: relative;
+  left: 170px;
+  top: -10px;
+}
+
+.filter-header {
+  position: relative;
+  top: 25px;
+  left: 25px;
+}
+
+.filter-list li {
+  list-style-type: none;
+  margin: 15px;
+  position: relative;
+  left: -10px;
+}
