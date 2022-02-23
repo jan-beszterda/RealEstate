@@ -14,9 +14,19 @@ const [submitet, setSubmitet] = useState(false)
 
 // min metod för det som sker när man har matat in sina uppgifter
 
+  const correctPassword = "password"
+  const CorrectUsername = "username"
+
  const handleSubmit = (event) => {
    event.preventDefault();
-   setSubmitet(true);
+   if(value.userName === correctPassword && value.password === correctPassword) {setSubmitet(true);
+    }
+
+    else{
+      alert("Please enter your correct password")
+    }
+
+   
  }
 // (event) är det som händer  inom input rutorna jag ber programmet att kopiera in den tomma strängen (...) för att sedan setta värdet till det som skrivs in i input rutan detta kallas inom onChange
 
@@ -26,6 +36,7 @@ const [submitet, setSubmitet] = useState(false)
   const passwordHandler  = (event) =>{
     setValue({...value, password: event.target.value})
   }
+  
 
  
 
@@ -33,8 +44,8 @@ const [submitet, setSubmitet] = useState(false)
     <div > 
     {handleSubmit && !value.userName ? <span className="username-enter">Enter your username please.</span> : null}
     {handleSubmit && !value.password ? <span className="password-enter">Enter your password please.</span> : null}
+     {submitet ? <div className="succses-msg"> Logged In</div> : null}
      <div className="login-container">
-     {submitet ? <div className="succses-msg">Submitet</div> : null}
      <form onSubmit = {handleSubmit}>
      <div>
      <input type="text" className="username-input" value = {value.userName} onChange={userNameHandler}></input>
