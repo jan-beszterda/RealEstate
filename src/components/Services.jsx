@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from "./Button";
+import Section from './Section';
 
 function Services() {
   return (
@@ -7,20 +8,22 @@ function Services() {
       <div className='service-headerContainer'>
       <h1 className='text-center'>Våra tjänster</h1>
       </div>
-      <div className='service-smallHeaderContainer'>
+      <Section className="service-sectionOne">
       <h2 className='text-center'>Letar du efter en ny bostad?</h2>
-      </div>
       <div className='service-paraContainer'>
-      <p className=''>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum provident nemo quod rem aspernatur sed voluptates soluta maxime est eius.</p>
+      <p className=''>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit pretium arcu ut sollicitudin. Proin non lorem est. Sed tempus nulla nulla. Sed tempor velit ut facilisis ullamcorper. Ut iaculis velit vitae enim rhoncus luctus id rutrum nisl. Sed sed sem blandit, elementum orci ut, ullamcorper lacus. Donec cursus mauris vitae turpis auctor, in sollicitudin ligula ultrices.</p>
       </div>
       <Button className="btn btn-primary mb-4 ms-2">Objekt till salu</Button>
-      <div className='service-smallHeaderContainer'>
+      </Section>
+      <Section className="service-sectionTwo">
+        <div className='service-smallHeaderContainer'>
       <h2 className='text-center'>Vi hjälper dig sälja din bostad!</h2>
       </div>
       <div className='service-paraContainer'>
-      <p className=''>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat asperiores quas omnis officiis molestiae iste. Facere deleniti odit eveniet sunt.</p>
+      <p className=''>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur suscipit pretium arcu ut sollicitudin. Proin non lorem est. Sed tempus nulla nulla. Sed tempor velit ut facilisis ullamcorper. Ut iaculis velit vitae enim rhoncus luctus id rutrum nisl. Sed sed sem blandit, elementum orci ut, ullamcorper lacus. Donec cursus mauris vitae turpis auctor, in sollicitudin ligula ultrices.</p>
       </div>
       <Button className="btn btn-primary mb-4 ms-2">Kontakta oss</Button>
+      </Section>
     </div>
   )
 }
