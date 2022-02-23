@@ -1,11 +1,12 @@
 import React from "react";
 import BookingForm from "./components/BookingForm";
 import Services from "./components/Services";
+import Blogg from "./components/Blogg";
 
 function App() {
   return (
     <div className="container">
-      <Services></Services>
+      <Blogg></Blogg>
     </div>
   );
 }
