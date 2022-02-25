@@ -1,123 +1,69 @@
-import { useEffect, useState } from "react";
-import { v4 as uuidv4 } from "uuid";
 import Button from "./Button";
 
-const ContactForm = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [contacts, setContacts] = useState([]);
-  const [success, setSuccess] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (firstName && lastName && phone && email && message) {
-      setContacts([
-        ...contacts,
-        {
-          firstName: firstName,
-          lastName: lastName,
-          phone: phone,
-          email: email,
-          message: message,
-          id: uuidv4(),
-        },
-      ]);
-      setFirstName("");
-      setLastName("");
-      setPhone("");
-      setEmail("");
-      setMessage("");
-      setSuccess(true);
-    }
+const ContactForm = (props) => {
+  const handleChange = (e) => {
+    props.onChange(e.target.name, e.target.value);
   };
 
-  useEffect(() => {
-    localStorage.setItem("Contact", JSON.stringify([...contacts]));
-  }, [contacts]);
-
   return (
-    <div className="container-sm contact-form">
-      <form onSubmit={handleSubmit}>
-        <div className="row mb-1 mx-2">
-          <label className="form-label px-0" htmlFor="firstName">
-            Förnamn
-          </label>
-        </div>
-        <div className="row mb-4 mx-2">
-          <input
-            className="form-control"
-            name="firstName"
-            type="text"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-          />
-        </div>
-        <div className="row mb-1 mx-2">
-          <label className="form-label px-0" htmlFor="lastName">
-            Efternamn
-          </label>
-        </div>
-        <div className="row mb-4 mx-2">
-          <input
-            className="form-control"
-            name="lastName"
-            type="text"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-          />
-        </div>
-        <div className="row mb-1 mx-2">
-          <label className="form-label px-0" htmlFor="phone">
-            Telefon
-          </label>
-        </div>
-        <div className="row mb-4 mx-2">
-          <input
-            className="form-control"
-            name="phone"
-            type="tel"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-          />
-        </div>
-        <div className="row mb-1 mx-2">
-          <label className="form-label px-0" htmlFor="email">
-            Email
-          </label>
-        </div>
-        <div className="row mb-4 mx-2">
-          <input
-            className="form-control"
-            name="email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div className="row mb-1 mx-2">
-          <label className="form-label px-0" htmlFor="message">
-            Frågor
-          </label>
-        </div>
-        <div className="row mb-4 mx-2">
-          <textarea
-            className="form-control"
-            name="message"
-            type="text"
-            rows={5}
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          />
-        </div>
-        <Button className="btn btn-primary mb-4 ms-2" type="submit">
+    <>
+      <form className="contact-form p-3" onSubmit={props.submit}>
+        <label className="form-label mb-1" htmlFor="firstName">
+          Förnamn
+        </label>
+        <input
+          className="form-control mb-4"
+          name="firstName"
+          type="text"
+          value={props.data.firstName}
+          onChange={handleChange}
+        />
+        <label className="form-label mb-1" htmlFor="lastName">
+          Efternamn
+        </label>
+        <input
+          className="form-control mb-4"
+          name="lastName"
+          type="text"
+          value={props.data.lastName}
+          onChange={handleChange}
+        />
+        <label className="form-label mb-1" htmlFor="phone">
+          Telefon
+        </label>
+        <input
+          className="form-control mb-4"
+          name="phone"
+          type="tel"
+          value={props.data.phone}
+          onChange={handleChange}
+        />
+        <label className="form-label mb-1" htmlFor="email">
+          Email
+        </label>
+        <input
+          className="form-control mb-4"
+          name="email"
+          type="email"
+          value={props.data.email}
+          onChange={handleChange}
+        />
+        <label className="form-label mb-1" htmlFor="message">
+          Frågor
+        </label>
+        <textarea
+          className="form-control mb-4"
+          name="message"
+          type="text"
+          rows={5}
+          value={props.data.message}
+          onChange={handleChange}
+        />
+        <Button className="btn btn-primary" type="submit">
           Skicka
         </Button>
       </form>
-      {success && <div>Thank you for your message</div>}
-    </div>
+    </>
   );
 };
 
