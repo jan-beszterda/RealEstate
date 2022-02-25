@@ -51,3 +51,10 @@ body {
   justify-content: center;
   padding: 10px;
 }
+
+.blogg-pic {
+  width: 100%;
+  max-width: 345px;
+  max-height: 166px;
+  position: relative;
+}
