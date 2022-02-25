@@ -1,23 +1,36 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 
-const ObjectCard = (props) => {
-  const { image, address, price, rooms, bathrooms, area, text } = props;
+const ObjectCard = ({ object }) => {
+  const { id, image, address, price, rooms, bathrooms, area, text } = object;
+
+  const navigate = useNavigate();
+
+  const onClick = () => {
+    navigate(`/forsale/${id}`);
+  };
+
   return (
-    <div className="card">
-      <img src={image} alt="Image" className="card-img-top" />
+    <div className="card h-100 mx-auto">
+      <img src={image} alt="" className="card-img-top" />
       <div className="card-body">
         <h5 className="card-title mb-2">{address}</h5>
-        <h6 className="card-subtitle mb-2">Pris: {price}</h6>
+      </div>
+      <ul className="list-group list-group-flush">
+        <li className="list-group-item">Pris: {price}</li>
+        <li className="list-group-item">Rooms: {rooms}</li>
+        <li className="list-group-item">Bathrooms: {bathrooms}</li>
+        <li className="list-group-item">Area: {area}</li>
+      </ul>
+      <div className="card-body">
+        {/*<h6 className="card-subtitle mb-2">Pris: {price}</h6>
         <h6 className="card-subtitle mb-2">Rooms: {rooms}</h6>
         <h6 className="card-subtitle mb-2">Bathrooms: {bathrooms}</h6>
-        <h6 className="card-subtitle mb-2">Area: {area}</h6>
-        <p className="card-text">{text}</p>
-        {/* <Link to="/"> */}
-        <Button className={"btn btn-primary"} type={"button"}>
-          Las mer
+  <h6 className="card-subtitle mb-2">Area: {area}</h6>*/}
+        <p className="card-text">{text[0]}</p>
+        <Button className={"btn btn-primary"} type={"button"} onClick={onClick}>
+          Läs mer
         </Button>
-        {/* </Link> */}
       </div>
     </div>
   );

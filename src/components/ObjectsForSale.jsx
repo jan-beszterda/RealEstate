@@ -1,26 +1,7 @@
-import { useState, useEffect } from "react";
-import { v4 as uuidv4 } from "uuid";
 import Button from "./Button.jsx";
 import ObjectCard from "./ObjectCard.jsx";
 
-const ObjectsForSale = () => {
-  const [objects, setObjects] = useState([]);
-
-  async function getObjects() {
-    const response = await fetch("objects.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    });
-    const json = await response.json();
-    setObjects(json.objects.map((object) => ({ ...object, id: uuidv4() })));
-  }
-
-  useEffect(() => {
-    getObjects();
-  }, []);
-
+const ObjectsForSale = ({ objects }) => {
   return (
     <>
       <div className="row justify-content-center align-content-center mb-4">
@@ -35,18 +16,10 @@ const ObjectsForSale = () => {
           </Button>
         </div>
       </div>
-      <div className="row row-cols-1 row-cols-sm-3 g-4 px-4">
+      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 px-2">
         {objects.map((object) => (
           <div className="col" key={object.id}>
-            <ObjectCard
-              image={object.image}
-              address={object.address}
-              price={object.price}
-              rooms={object.rooms}
-              bathrooms={object.bathrooms}
-              area={object.area}
-              text={object.text}
-            />
+            <ObjectCard key={object.id} object={object} />
           </div>
         ))}
       </div>
