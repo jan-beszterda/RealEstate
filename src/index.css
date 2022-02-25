@@ -2,23 +2,33 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow: auto;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #fffffe !important;
+  background-color: #baa360 !important;
   color: #000000 !important;
   font-size: 1rem;
 }
 
+#root {
+  background-color: #fffffe;
+  margin: 5px 0;
+  overflow: auto;
+}
+
+.image-background {
+  background: url("") no-repeat fixed center center;
+}
+
 footer {
   background-color: #d3d3d3 !important;
-  max-height: 100px !important;
-  font-size: 0.6rem !important;
+  font-size: 1rem;
 }
 
 footer > div > p {
-  font-size: 0.4rem !important;
+  font-size: 0.8rem !important;
   letter-spacing: 1px !important;
 }
 
@@ -35,6 +45,12 @@ footer > div > p {
 .section-grey {
   background-color: rgba(211, 211, 211, 0.75);
   border-radius: 15px;
+}
+
+.btn-icon {
+  background-color: #fffffe;
+  border: none;
+  outline: none;
 }
 
 .btn-primary {
@@ -107,7 +123,7 @@ footer > div > p {
 }
 
 .card {
-  max-width: 18rem;
+  max-width: 25rem;
   border-color: #baa360;
 }
 

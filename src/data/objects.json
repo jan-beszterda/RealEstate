@@ -1,13 +1,17 @@
 {
   "objects": [
     {
-      "image": "",
+      "image": "/logo192.png",
       "address": "Kungsgatan 46, Göteborg",
       "price": "4 995 000 kr",
       "rooms": "4",
       "bathrooms": "1",
       "area": "98 km",
-      "text": "Trevligt 4rok i centrala Göteborg med utsikt över kanalen."
+      "text": [
+        "Trevligt 4rok i centrala Göteborg med utsikt över kanalen.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue aliquam malesuada. Donec leo ipsum, lacinia at urna in, laoreet aliquam nunc. In ornare ex molestie mauris venenatis mollis a ac mi. Aliquam in elit nunc. Praesent maximus quam nec bibendum fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed eleifend nisi sit amet eros laoreet convallis.",
+        "Etiam et erat viverra, vulputate enim vitae, pellentesque dui. Phasellus lacinia fermentum ex, et convallis sapien lobortis id. Duis et odio tortor. Integer id mauris luctus, placerat quam non, sagittis nibh. Integer neque eros, vulputate ac mollis non, pretium at dui. Nulla id odio sed risus convallis laoreet. Proin est libero, scelerisquenon justo vitae, dapibus aliquet quam. Suspendisse tempor porta blandit. Sed euismod malesuada felis et tincidunt. Aliquam vehicula auctor pellentesque. Quisque eget tellus et velit molestie sollicitudin. Sed ex nulla, efficitur a sollicitudin tempus, tristique sit amet nibh."
+      ]
     },
     {
       "image": "",
