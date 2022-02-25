@@ -19,7 +19,7 @@ const [submitet, setSubmitet] = useState(false)
 
  const handleSubmit = (event) => {
    event.preventDefault();
-   if(value.userName === correctPassword && value.password === correctPassword) {setSubmitet(true);
+   if(value.userName === CorrectUsername && value.password === correctPassword) {setSubmitet(true);
     }
 
     else{
