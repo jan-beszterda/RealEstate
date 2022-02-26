@@ -8,7 +8,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #fffffe !important;
   color: #000000 !important;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 footer {
@@ -68,4 +68,135 @@ footer > div > p {
   border: 2px solid #baa360 !important;
   box-shadow: none !important;
   outline: 0 !important;
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 30vh;
+  width: 30vw;
+  background-color: rgba(211, 211, 211, 0.8);
+  border-radius: 15px;
+  position: relative;
+  top: -50%;
+  left: -50%;
+}
+
+.card {
+  max-width: 18rem;
+  border-color: #baa360;
+}
+
+.login-container {
+  position: absolute;
+  width: 588px;
+  height: 70px;
+  left: 832px;
+  top: 163px;
+
+  background: #d3d3d3;
+  border-radius: 10px;
+}
+
+.username-input {
+  position: relative;
+  width: 142px;
+  height: 33.8px;
+  left: 95px;
+  top: 20px;
+
+  background: #fff;
+  border: 1px solid #d3d3d3;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+.login-username {
+  position: relative;
+  left: 10px;
+  top: -10px;
+  height: 30px;
+  width: 10px;
+}
+
+.password-input {
+  position: relative;
+  width: 142px;
+  height: 33.8px;
+  left: 330px;
+  top: -60px;
+
+  background: #fff;
+  border: 1px solid #d3d3d3;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+.login-password {
+  position: relative;
+  left: 250px;
+  top: -90px;
+  height: 30px;
+  width: 10px;
+}
+
+.login-btn {
+  position: absolute;
+  width: 66.54px;
+  height: 33.8px;
+  left: 510px;
+  top: 20px;
+
+  background: #baa360;
+  border-radius: 15px;
+}
+
+.username-enter {
+  position: relative;
+  left: 750px;
+  top: 110px;
+  background: red;
+}
+.password-enter {
+  position: relative;
+  left: 850px;
+  top: 110px;
+  background: red;
+}
+
+.succses-msg {
+  position: relative;
+  left: 950px;
+  top: 220px;
+  color: green;
+}
+
+.filter-container {
+  position: relative;
+  width: 223px;
+  height: 400px;
+  left: -80px;
+  top: 15px;
+  background-color: #d3d3d3;
+}
+
+.close-filter {
+  position: relative;
+  left: 170px;
+  top: -10px;
+}
+
+.filter-header {
+  position: relative;
+  top: 25px;
+  left: 25px;
+}
+
+.filter-list li {
+  list-style-type: none;
+  margin: 15px;
+  position: relative;
+  left: -10px;
 }
