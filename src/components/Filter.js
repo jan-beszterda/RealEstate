@@ -6,6 +6,31 @@ function Filter() {
 
 const [Open, setOpen] = useState(false)
 const [Close, SetClose] = useState(true)
+const [value, setValue] = useState(0)
+
+
+var [state, setState] = useState({
+  price : 1,
+  area : 1,
+  rooms : 1,
+  bathrooms : 1
+})
+
+const handlePriceSlider = (event) =>{
+  setState ({price : event.target.value})
+}
+
+const handleAreaSlider = (event) =>{
+  setState ({area : event.target.value})
+}
+const handleRoomSlider = (event) =>{
+  setState ({rooms : event.target.value})
+}
+
+const handleBathRoomSlider = (event) =>{
+  setState ({bathrooms : event.target.value})
+}
+
 
  const openHandler  = (event) =>{
    console.log("Open the menu")
@@ -20,23 +45,25 @@ const [Close, SetClose] = useState(true)
     <h5 className="filter-header">Filter</h5>
     <AiFillCloseCircle size="2rem" className="close-filter"/>
    <ul className="filter-list">
-   <li>Price</li>
+   <li>Price <span id="price-range-value">{state.price}</span></li>
    <div class="slidecontainer">
-  <input type="range" min="1" max="100" value="1" class="price-slider" id="price-range"></input>
-</div>
-   <li>Area</li>
-   <div class="slidecontainer">
-  <input type="range" min="1" max="100" value="50" class="area-slider" id="area-range"></input>
-</div>
-   <li>Rooms</li>
-   <div class="slidecontainer">
-  <input type="range" min="1" max="100" value="50" class="room-slider" id="room-range"></input>
-</div>
-   <li>Bathrooms</li>
-   <div class="slidecontainer">
-  <input type="range" min="1" max="100" value="50" class="bathroom-slider" id="bathroom-range"></input>
-</div>
+
+  <input type="range" min="1" max="1000000"   class="price-slider" id="price-range" onChange={handlePriceSlider}></input>
+  
+
+   <li>Area <span id="area-range-value">{state.area}</span></li>
+
+  <input type="range" min="1" max="100"class="area-slider" id="area-range" onChange={handleAreaSlider}></input>
    
+   <li>Rooms <span id="room-range-value">{state.rooms}</span></li>
+   
+  <input type="range" min="1" max="100"  class="room-slider" id="room-range" onChange={handleRoomSlider}></input>
+   
+   <li>Bathrooms <span id="bathroom-range-value">{state.bathrooms}</span></li>
+
+  <input type="range" min="1" max="100"  class="bathroom-slider" id="bathroom-range" onChange={handleBathRoomSlider}></input>
+  
+</div>
    
    </ul>
 
