@@ -42,10 +42,9 @@ const [submitet, setSubmitet] = useState(false)
 
   return (
     <div > 
-    {handleSubmit && !value.userName ? <span className="username-enter">Enter your username please.</span> : null}
-    {handleSubmit && !value.password ? <span className="password-enter">Enter your password please.</span> : null}
-     {submitet ? <div className="succses-msg"> Logged In</div> : null}
-     <div className="login-container">
+   
+    
+     { !submitet ?<div className="login-container">
      <form onSubmit = {handleSubmit}>
      <div>
      <input type="text" className="username-input" value = {value.userName} onChange={userNameHandler}></input>
@@ -62,8 +61,8 @@ const [submitet, setSubmitet] = useState(false)
      <button className="login-btn" type="submit" >Log In</button>
      </form>
      
-     </div>
-   </div>
+     </div>: null}
+   </div> 
 
    
   )
