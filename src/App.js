@@ -27,7 +27,7 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <main className="container-sm my-3">
+      <main id="main" className="container-fluid main py-4">
         <Routes>
           <Route path="/services" element={<Services />} />
           <Route

@@ -3,7 +3,7 @@ import ObjectCard from "./ObjectCard.jsx";
 
 const ObjectsForSale = ({ objects }) => {
   return (
-    <>
+    <div className="container-sm">
       <div className="row justify-content-center align-content-center mb-4">
         <div className="col-auto d-flex flex-column justify-content-center align-content-center">
           <h2 className="text-center">Våra lediga bostäder</h2>
@@ -23,7 +23,7 @@ const ObjectsForSale = ({ objects }) => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
