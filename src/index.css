@@ -115,5 +115,48 @@ footer > div > p {
   width: 100%;
   max-width: 345px;
   max-height: 166px;
-  position: relative;
+}
+
+.login-container {
+  background: #d3d3d3;
+  padding: 4px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.username-input {
+  background: #fff;
+  border: 1px solid #d3d3d3;
+  box-sizing: border-box;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.password-input {
+  background: #fff;
+  border: 1px solid #d3d3d3;
+  box-sizing: border-box;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.succses-msg {
+  color: green;
+}
+
+.test {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 10px;
+  padding: 2px;
+}
+
+.line {
+  display: flex;
+  flex-direction: row;
+}
+
+.line > button {
+  margin: 8px;
 }

@@ -4,7 +4,9 @@ import Services from "./components/Services";
 import Blogg from "./components/Blogg";
 
 function App() {
-  return <main className="container-sm my-3"><Blogg></Blogg></main>;
+  return <main className="container-sm my-3">
+    <Blogg></Blogg>
+    </main>;
 }
 
 export default App;
