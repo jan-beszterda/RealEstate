@@ -10,6 +10,7 @@ const [value, setValue] = useState({
   password: '',
 })
 
+const [logout, setLogout] = useState(false)
 const [submitet, setSubmitet] = useState(false)
 
 // min metod för det som sker när man har matat in sina uppgifter
@@ -19,8 +20,8 @@ const [submitet, setSubmitet] = useState(false)
 
  const handleSubmit = (event) => {
    event.preventDefault();
-   if(value.userName === CorrectUsername && value.password === correctPassword) {setSubmitet(true);
-    }
+   if(value.userName === CorrectUsername && value.password === correctPassword) {setSubmitet(true)
+     setLogout(true)}  
 
     else{
       alert("Please enter your correct password")
@@ -37,7 +38,11 @@ const [submitet, setSubmitet] = useState(false)
     setValue({...value, password: event.target.value})
   }
   
-
+  const logoutHandler = (event) =>{
+    event.preventDefault()
+    setLogout(false);
+    setSubmitet(false);
+  }
   
  
 
@@ -46,6 +51,7 @@ const [submitet, setSubmitet] = useState(false)
 
     
      { !submitet ?<div className="login-container">
+     
      <form onSubmit = {handleSubmit}>
      <div>
      <input type="text" className="username-input" value = {value.userName} onChange={userNameHandler}></input>
@@ -60,9 +66,11 @@ const [submitet, setSubmitet] = useState(false)
      </div>
 
      <button className="login-btn" type="submit" >Log In</button>
+ 
      </form>
      
      </div>: null}
+     { logout ?<button className="logout-btn" type="submit" onClick={logoutHandler}>Log Out</button> : null}
    </div> 
 
    

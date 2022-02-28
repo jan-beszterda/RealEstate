@@ -93,7 +93,7 @@ footer > div > p {
   position: absolute;
   width: 588px;
   height: 70px;
-  left: 832px;
+  left: 632px;
   top: 163px;
 
   background: #d3d3d3;
@@ -148,6 +148,17 @@ footer > div > p {
   height: 33.8px;
   left: 510px;
   top: 20px;
+
+  background: #baa360;
+  border-radius: 15px;
+}
+
+.logout-btn {
+  position: absolute;
+  width: 66.54px;
+  height: 33.8px;
+  left: 910px;
+  top: 100px;
 
   background: #baa360;
   border-radius: 15px;
