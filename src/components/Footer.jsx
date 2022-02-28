@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="container-fluid mt-4 p-2">
-      <div className="row">
+    <footer className="container-fluid p-2">
+      <div className="row gx-0">
         <ul className="nav justify-content-center align-items-center pb-2 mb-2">
           <li className="nav-item">
             <Link to="/" className="nav-link px-2">
@@ -42,7 +42,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className="row">
+      <div className="row gx-0">
         <p className="text-center">&copy; 2022 Real Estate AB</p>
       </div>
     </footer>

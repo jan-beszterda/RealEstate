@@ -57,7 +57,7 @@ const ContactUs = () => {
   }, [contacts]);
 
   return (
-    <>
+    <div className="container-sm">
       {success && (
         <div className="overlay">
           <span className="text-center">Thank you for your message</span>
@@ -105,7 +105,7 @@ const ContactUs = () => {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

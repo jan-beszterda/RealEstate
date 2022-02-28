@@ -76,33 +76,35 @@ const ObjectPage = ({ objects }) => {
   };
 
   return (
-    <div className="row row-cols-1 row-cols-lg-3">
-      <div className="col-lg-1">
-        <Button className={"btn-icon"} type={"button"} onClick={onClick}>
-          <FontAwesomeIcon icon={faRotateLeft} className="fa-2x" />
-          <div>Tillbaka</div>
-        </Button>
-      </div>
-      <div className="col-lg-6 mb-2">
-        <img src={object.image} alt="apartment" />
-        <div>
-          <h4>{object.address}</h4>
-          <h5>Pris: {object.price}</h5>
-          <h5>Rooms: {object.rooms}</h5>
-          <h5>Bathrooms: {object.bathrooms}</h5>
-          <h5>Area: {object.area}</h5>
-          {text.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
+    <div className="container-sm">
+      <div className="row row-cols-1 row-cols-lg-3">
+        <div className="col-lg-1">
+          <Button className={"btn-icon"} type={"button"} onClick={onClick}>
+            <FontAwesomeIcon icon={faRotateLeft} className="fa-2x" />
+            <div>Tillbaka</div>
+          </Button>
         </div>
-      </div>
-      <div className="col-lg-5">
-        <BookingForm
-          data={booking}
-          onChange={handleFieldChange}
-          submit={handleSubmit}
-          success={success}
-        />
+        <div className="col-lg-6 mb-2">
+          <img src={object.image} alt="apartment" />
+          <div>
+            <h4>{object.address}</h4>
+            <h5>Pris: {object.price}</h5>
+            <h5>Rooms: {object.rooms}</h5>
+            <h5>Bathrooms: {object.bathrooms}</h5>
+            <h5>Area: {object.area}</h5>
+            {text.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+        <div className="col-lg-5">
+          <BookingForm
+            data={booking}
+            onChange={handleFieldChange}
+            submit={handleSubmit}
+            success={success}
+          />
+        </div>
       </div>
     </div>
   );
