@@ -1,0 +1,82 @@
+{
+  "objects": [
+    {
+      "image": "/graphics/sidekix-media-l6u4GIKvxBs-unsplash(1).jpg",
+      "address": "Kungsgatan 46, Göteborg",
+      "price": "4 995 000 kr",
+      "rooms": "4",
+      "bathrooms": "1",
+      "area": "98 km",
+      "text": [
+        "Trevligt 4rok i centrala Göteborg med utsikt över kanalen.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue aliquam malesuada. Donec leo ipsum, lacinia at urna in, laoreet aliquam nunc. In ornare ex molestie mauris venenatis mollis a ac mi. Aliquam in elit nunc. Praesent maximus quam nec bibendum fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed eleifend nisi sit amet eros laoreet convallis.",
+        "Etiam et erat viverra, vulputate enim vitae, pellentesque dui. Phasellus lacinia fermentum ex, et convallis sapien lobortis id. Duis et odio tortor. Integer id mauris luctus, placerat quam non, sagittis nibh. Integer neque eros, vulputate ac mollis non, pretium at dui. Nulla id odio sed risus convallis laoreet. Proin est libero, scelerisquenon justo vitae, dapibus aliquet quam. Suspendisse tempor porta blandit. Sed euismod malesuada felis et tincidunt. Aliquam vehicula auctor pellentesque. Quisque eget tellus et velit molestie sollicitudin. Sed ex nulla, efficitur a sollicitudin tempus, tristique sit amet nibh."
+      ]
+    },
+    {
+      "image": "/graphics/naomi-hebert-MP0bgaS_d1c-unsplash(1).jpg",
+      "address": "Skolgatan 9, Göteborg",
+      "price": "2 795 000 kr",
+      "rooms": "2",
+      "bathrooms": "1",
+      "area": "50 km",
+      "text": [
+        "Nyrenoverade 2:a i Haga, den charmiga delen av Göteborg med fina caféer och butiker.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue aliquam malesuada. Donec leo ipsum, lacinia at urna in, laoreet aliquam nunc. In ornare ex molestie mauris venenatis mollis a ac mi. Aliquam in elit nunc. Praesent maximus quam nec bibendum fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed eleifend nisi sit amet eros laoreet convallis.",
+        "Etiam et erat viverra, vulputate enim vitae, pellentesque dui. Phasellus lacinia fermentum ex, et convallis sapien lobortis id. Duis et odio tortor. Integer id mauris luctus, placerat quam non, sagittis nibh. Integer neque eros, vulputate ac mollis non, pretium at dui. Nulla id odio sed risus convallis laoreet. Proin est libero, scelerisquenon justo vitae, dapibus aliquet quam. Suspendisse tempor porta blandit. Sed euismod malesuada felis et tincidunt. Aliquam vehicula auctor pellentesque. Quisque eget tellus et velit molestie sollicitudin. Sed ex nulla, efficitur a sollicitudin tempus, tristique sit amet nibh."
+      ]
+    },
+    {
+      "image": "/graphics/roberto-nickson-rEJxpBskj3Q-unsplash(2).jpg",
+      "address": "Vasagatan 54, Göteborg",
+      "price": "6 995 000 kr",
+      "rooms": "5",
+      "bathrooms": "2",
+      "area": "123 km",
+      "text": [
+        "Fräsch 5:a i Göteborg. Nära till centrum och tågstationen.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue aliquam malesuada. Donec leo ipsum, lacinia at urna in, laoreet aliquam nunc. In ornare ex molestie mauris venenatis mollis a ac mi. Aliquam in elit nunc. Praesent maximus quam nec bibendum fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed eleifend nisi sit amet eros laoreet convallis.",
+        "Etiam et erat viverra, vulputate enim vitae, pellentesque dui. Phasellus lacinia fermentum ex, et convallis sapien lobortis id. Duis et odio tortor. Integer id mauris luctus, placerat quam non, sagittis nibh. Integer neque eros, vulputate ac mollis non, pretium at dui. Nulla id odio sed risus convallis laoreet. Proin est libero, scelerisquenon justo vitae, dapibus aliquet quam. Suspendisse tempor porta blandit. Sed euismod malesuada felis et tincidunt. Aliquam vehicula auctor pellentesque. Quisque eget tellus et velit molestie sollicitudin. Sed ex nulla, efficitur a sollicitudin tempus, tristique sit amet nibh."
+      ]
+    },
+    {
+      "image": "/graphics/sigmund-CwTfKH5edSk-unsplash(1).jpg",
+      "address": "Tellgrensgatan 15, Göteborg",
+      "price": "1 950 000 kr",
+      "rooms": "1",
+      "bathrooms": "1",
+      "area": "36 km",
+      "text": [
+        "1:a i Majorna. Lugn område, nära till Slottsskogen.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue aliquam malesuada. Donec leo ipsum, lacinia at urna in, laoreet aliquam nunc. In ornare ex molestie mauris venenatis mollis a ac mi. Aliquam in elit nunc. Praesent maximus quam nec bibendum fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed eleifend nisi sit amet eros laoreet convallis.",
+        "Etiam et erat viverra, vulputate enim vitae, pellentesque dui. Phasellus lacinia fermentum ex, et convallis sapien lobortis id. Duis et odio tortor. Integer id mauris luctus, placerat quam non, sagittis nibh. Integer neque eros, vulputate ac mollis non, pretium at dui. Nulla id odio sed risus convallis laoreet. Proin est libero, scelerisquenon justo vitae, dapibus aliquet quam. Suspendisse tempor porta blandit. Sed euismod malesuada felis et tincidunt. Aliquam vehicula auctor pellentesque. Quisque eget tellus et velit molestie sollicitudin. Sed ex nulla, efficitur a sollicitudin tempus, tristique sit amet nibh."
+      ]
+    },
+    {
+      "image": "/graphics/marla-prusik-5q1KnUjtjaM-unsplash(1).jpg",
+      "address": "Monsungatan 33, Göteborg",
+      "price": "5 995 000 kr",
+      "rooms": "3",
+      "bathrooms": "1",
+      "area": "79 km",
+      "text": [
+        "Trea till salu i den moderniserade stadsdelen Eriksberg.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue aliquam malesuada. Donec leo ipsum, lacinia at urna in, laoreet aliquam nunc. In ornare ex molestie mauris venenatis mollis a ac mi. Aliquam in elit nunc. Praesent maximus quam nec bibendum fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed eleifend nisi sit amet eros laoreet convallis.",
+        "Etiam et erat viverra, vulputate enim vitae, pellentesque dui. Phasellus lacinia fermentum ex, et convallis sapien lobortis id. Duis et odio tortor. Integer id mauris luctus, placerat quam non, sagittis nibh. Integer neque eros, vulputate ac mollis non, pretium at dui. Nulla id odio sed risus convallis laoreet. Proin est libero, scelerisquenon justo vitae, dapibus aliquet quam. Suspendisse tempor porta blandit. Sed euismod malesuada felis et tincidunt. Aliquam vehicula auctor pellentesque. Quisque eget tellus et velit molestie sollicitudin. Sed ex nulla, efficitur a sollicitudin tempus, tristique sit amet nibh."
+      ]
+    },
+    {
+      "image": "/graphics/r-architecture-2gDwlIim3Uw-unsplash(1).jpg",
+      "address": "Videlundsgatan 4, Göteborg",
+      "price": "11 495 000 kr",
+      "rooms": "7",
+      "bathrooms": "2",
+      "area": "186 km",
+      "text": [
+        "Modern villa med 7 rum och två badrum. Stor tomt och nära till havet.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue aliquam malesuada. Donec leo ipsum, lacinia at urna in, laoreet aliquam nunc. In ornare ex molestie mauris venenatis mollis a ac mi. Aliquam in elit nunc. Praesent maximus quam nec bibendum fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed eleifend nisi sit amet eros laoreet convallis.",
+        "Etiam et erat viverra, vulputate enim vitae, pellentesque dui. Phasellus lacinia fermentum ex, et convallis sapien lobortis id. Duis et odio tortor. Integer id mauris luctus, placerat quam non, sagittis nibh. Integer neque eros, vulputate ac mollis non, pretium at dui. Nulla id odio sed risus convallis laoreet. Proin est libero, scelerisquenon justo vitae, dapibus aliquet quam. Suspendisse tempor porta blandit. Sed euismod malesuada felis et tincidunt. Aliquam vehicula auctor pellentesque. Quisque eget tellus et velit molestie sollicitudin. Sed ex nulla, efficitur a sollicitudin tempus, tristique sit amet nibh."
+      ]
+    }
+  ]
+}

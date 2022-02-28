@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 body {
@@ -10,6 +12,7 @@ body {
   color: #000000 !important;
   font-size: 1rem;
 }
+
 
 header {
   background-color: #d3d3d3;
@@ -41,17 +44,30 @@ nav {
 
 h1, p {
   padding-top: 20px;
-  
+}
+
+#root {
+  background-color: #baa360;
+  overflow: auto;
+}
+
+.main {
+  background-color: #fffffe !important;
+}
+
+.main-image {
+  background: url("../public/logo512.png") no-repeat scroll center center !important;
+
 }
 
 footer {
   background-color: #d3d3d3 !important;
-  max-height: 100px !important;
-  font-size: 0.6rem !important;
+  font-size: 1rem;
+  margin-bottom: 5px;
 }
 
 footer > div > p {
-  font-size: 0.4rem !important;
+  font-size: 0.8rem !important;
   letter-spacing: 1px !important;
 }
 
@@ -68,6 +84,12 @@ footer > div > p {
 .section-grey {
   background-color: rgba(211, 211, 211, 0.75);
   border-radius: 15px;
+}
+
+.btn-icon {
+  background-color: #fffffe;
+  border: none;
+  outline: none;
 }
 
 .btn-primary {
@@ -118,6 +140,105 @@ footer > div > p {
   border: 2px solid #baa360 !important;
   box-shadow: none !important;
   outline: 0 !important;
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 30vh;
+  width: 50vh;
+  margin: auto;
+  background-color: rgba(211, 211, 211);
+  border-radius: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.card {
+  max-width: 25rem;
+  border-color: #baa360;
+}
+
+.card-img-top {
+  max-width: 100%;
+  height: auto;
+  max-height: 15rem;
+}
+
+.object-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.login-container {
+  position: absolute;
+  width: 588px;
+  height: 70px;
+  left: 832px;
+  top: 163px;
+
+  background: #d3d3d3;
+  border-radius: 10px;
+}
+
+.username-input {
+  position: relative;
+  width: 142px;
+  height: 33.8px;
+  left: 95px;
+  top: 20px;
+
+  background: #fff;
+  border: 1px solid #d3d3d3;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+.login-username {
+  position: relative;
+  left: 10px;
+  top: -10px;
+  height: 30px;
+  width: 10px;
+}
+
+.password-input {
+  position: relative;
+  width: 142px;
+  height: 33.8px;
+  left: 330px;
+  top: -60px;
+
+  background: #fff;
+  border: 1px solid #d3d3d3;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+.login-password {
+  position: relative;
+  left: 250px;
+  top: -90px;
+  height: 30px;
+  width: 10px;
+}
+
+.login-btn {
+  position: absolute;
+  width: 66.54px;
+  height: 33.8px;
+  left: 510px;
+  top: 20px;
+
+  background: #baa360;
+  border-radius: 15px;
 }
 
 .overlay {
