@@ -7,7 +7,12 @@ const ObjectsForSale = ({ objects }) => {
       <div className="row justify-content-center align-content-center mb-4">
         <div className="col-auto d-flex flex-column justify-content-center align-content-center">
           <h2 className="text-center">Våra lediga bostäder</h2>
-          <p className="text-center">Text text text text</p>
+          <p className="text-center fs-5">
+            Redo för nästa steg i livet? Funderar du på att flytta?
+            <br />
+            Ta en titt på våra lediga bostäder. Kom ihåg att vi kan hjälpa dig
+            med bostadslån.
+          </p>
           <Button
             className={"btn btn-primary align-self-center"}
             type={"button"}

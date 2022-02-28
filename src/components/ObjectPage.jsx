@@ -85,8 +85,8 @@ const ObjectPage = ({ objects }) => {
           </Button>
         </div>
         <div className="col-lg-6 mb-2">
-          <img src={object.image} alt="apartment" />
-          <div>
+          <img src={object.image} alt="apartment" className="object-image" />
+          <div className="mt-2">
             <h4>{object.address}</h4>
             <h5>Pris: {object.price}</h5>
             <h5>Rooms: {object.rooms}</h5>

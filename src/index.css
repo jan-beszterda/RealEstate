@@ -131,6 +131,17 @@ footer > div > p {
   border-color: #baa360;
 }
 
+.card-img-top {
+  max-width: 100%;
+  height: auto;
+  max-height: 15rem;
+}
+
+.object-image {
+  max-width: 100%;
+  height: auto;
+}
+
 .login-container {
   position: absolute;
   width: 588px;
