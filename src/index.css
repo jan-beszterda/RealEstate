@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: auto;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 body {
