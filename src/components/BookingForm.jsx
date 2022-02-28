@@ -62,7 +62,9 @@ const BookingForm = (props) => {
         <Button className="btn btn-primary btn-lg" type="submit">
           Boka
         </Button>
-        {props.success && <div>Vi har tagit emot din bokning!</div>}
+        {props.success && (
+          <div className="my-2">Vi har tagit emot din bokning!</div>
+        )}
       </form>
     </div>
   );

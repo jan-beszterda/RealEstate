@@ -48,7 +48,7 @@ const ObjectPage = ({ objects }) => {
       setSuccess(true);
       setTimeout(() => {
         setSuccess(false);
-      }, 10000);
+      }, 1000);
     }
   };
 
