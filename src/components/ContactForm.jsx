@@ -59,7 +59,7 @@ const ContactForm = (props) => {
           value={props.data.message}
           onChange={handleChange}
         />
-        <Button className="btn btn-primary" type="submit">
+        <Button className="btn btn-primary btn-lg" type="submit">
           Skicka
         </Button>
       </form>
