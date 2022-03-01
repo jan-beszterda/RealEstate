@@ -85,13 +85,13 @@ const ObjectPage = ({ objects }) => {
           </Button>
         </div>
         <div className="col-lg-6 mb-2">
-          <img src={object.image} alt="apartment" className="object-image" />
+          <img src={object.image} alt="apartment" className="img-fluid" />
           <div className="mt-2">
             <h4>{object.address}</h4>
             <h5>Pris: {object.price}</h5>
-            <h5>Rooms: {object.rooms}</h5>
-            <h5>Bathrooms: {object.bathrooms}</h5>
-            <h5>Area: {object.area}</h5>
+            <h5>Rum: {object.rooms}</h5>
+            <h5>Badrum: {object.bathrooms}</h5>
+            <h5>Boarea: {object.area}</h5>
             {text.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}
