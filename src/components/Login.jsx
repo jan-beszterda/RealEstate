@@ -24,7 +24,7 @@ const [submitet, setSubmitet] = useState(false)
     }
 
     else{
-      alert("Please enter your correct password")
+      alert("Fel användarnamn eller lösenord... Försök igen! ")
     }
 
    
@@ -56,12 +56,10 @@ const [submitet, setSubmitet] = useState(false)
 
      <div className='test'>
      <input type="text" className="username-input" placeholder='Användarnamn' value = {value.userName} onChange={userNameHandler}></input>
-     <p></p>
      </div>
 
      <div className='test'>
      <input type="text" className="password-input" placeholder='Lösenord' value = {value.password} onChange={passwordHandler}></input>
-     <p></p>
      </div>
 
      <Button className="btn btn-primary" type="submit">
