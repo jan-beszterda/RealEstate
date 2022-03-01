@@ -5,6 +5,7 @@ import Button from "./Button";
 function CreateBlogg() {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
+    const [url, setUrl] = useState('');
 
 
   return (
@@ -22,14 +23,16 @@ function CreateBlogg() {
             <textarea
             required
             value={body}
-            onChange={(e) => setBody(e.target.value)}>
-                
+            onChange={(e) => setBody(e.target.value)}>  
             </textarea>
-            <label>Skapare</label>
-            <select>
-                <option value=""></option>
-                <option value=""></option>
-            </select>
+            
+            <label>URL</label>
+            <input 
+            type="text" 
+            value={url}
+            onChange={(e) => setUrl(e.target.value)}
+            />
+            
             <Button className="btn btn-primary mb-4 ms-2">Skapa inlägg</Button>
             <p>{title}</p>
             <p>{body}</p>

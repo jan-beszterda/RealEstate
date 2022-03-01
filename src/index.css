@@ -165,6 +165,9 @@ footer > div > p {
   max-width: 400px;
   margin: 0 auto;
   text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: rgba(211, 211, 211, 0.75);
 }
 
 .create label {
