@@ -13,12 +13,40 @@ body {
   font-size: 1rem;
 }
 
-
-header {
+/* header {
   background-color: #d3d3d3;
   display: flex;
   flex-direction: column;
   
+} */
+
+.logo {
+  width: 70px;
+  height: auto;
+}
+
+#nav-container {
+  flex-direction: column;
+}
+
+header {
+  background-color: #d3d3d3;
+  margin-top: 5px;
+}
+
+.navbar-toggler {
+  border: none !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:active,
+.navbar-toggler:visited,
+.navbar-toggler:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: 0 !important;
 }
 
 .section-home {
@@ -27,24 +55,22 @@ header {
   border-radius: 15px;
   background: pink;
   margin: auto;
-  padding: 20px; 
+  padding: 20px;
   text-align: justify;
-  
 }
 
 .section-about {
   text-align: center;
 }
 
-
-nav {
- margin: -12px;
- 
+/* nav {
+  margin: -12px;
 }
 
-h1, p {
+h1,
+p {
   padding-top: 20px;
-}
+} */
 
 #root {
   background-color: #baa360;
@@ -57,7 +83,6 @@ h1, p {
 
 .main-image {
   background: url("../public/logo512.png") no-repeat scroll center center !important;
-
 }
 
 footer {
@@ -261,7 +286,7 @@ footer > div > p {
 }
 
 .card {
-  max-width: 18rem;
+  max-width: 20rem;
   border-color: #baa360;
 }
 
@@ -330,32 +355,24 @@ footer > div > p {
 }
 
 .header-image {
- max-height: 70px;
+  max-height: 70px;
 }
 
 .about-container {
   position: relative;
-
 }
 
 .about-image {
   width: 100%;
   height: auto;
-  border: 2px;
-  border-radius: 30px;
-  padding: 5px;
 }
-
-
-
-
-
 
 /*.home-image {
  background-image: url(/public/images/apartment.jpg);
   }*/
 
-
-
-
-
+@media only screen and (max-width: 767px) {
+  #nav-container {
+    flex-direction: row;
+  }
+}

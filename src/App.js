@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import ContactUs from "./components/ContactUs";
 import Services from "./components/Services";
 import Blogg from "./components/Blogg";
+import About from "./components/About";
 
 import data from "./data/objects.json";
 
@@ -38,6 +39,7 @@ function App() {
             path="forsale/:id"
             element={<ObjectPage objects={objects} />}
           />
+          <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blogg />} />
           <Route path="/contact" element={<ContactUs />} />
         </Routes>

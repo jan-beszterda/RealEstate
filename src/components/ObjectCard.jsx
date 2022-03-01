@@ -18,9 +18,9 @@ const ObjectCard = ({ object }) => {
       </div>
       <ul className="list-group list-group-flush">
         <li className="list-group-item">Pris: {price}</li>
-        <li className="list-group-item">Rooms: {rooms}</li>
-        <li className="list-group-item">Bathrooms: {bathrooms}</li>
-        <li className="list-group-item">Area: {area}</li>
+        <li className="list-group-item">Rum: {rooms}</li>
+        <li className="list-group-item">Badrum: {bathrooms}</li>
+        <li className="list-group-item">Boarea: {area}</li>
       </ul>
       <div className="card-body">
         {/*<h6 className="card-subtitle mb-2">Pris: {price}</h6>
