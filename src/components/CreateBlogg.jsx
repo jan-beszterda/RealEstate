@@ -34,8 +34,6 @@ function CreateBlogg() {
             />
             
             <Button className="btn btn-primary mb-4 ms-2">Skapa inlägg</Button>
-            <p>{title}</p>
-            <p>{body}</p>
         </form>
     </div>
   )
