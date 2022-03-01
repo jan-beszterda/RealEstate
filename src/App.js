@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import ContactUs from "./components/ContactUs";
 import Services from "./components/Services";
 import Blogg from "./components/Blogg";
+import CreateBlogg from "./components/CreateBlogg";
 
 import data from "./data/objects.json";
 
