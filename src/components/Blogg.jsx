@@ -1,17 +1,51 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
+
 import Section from './Section'
 import Button from './Button'
 import Login from './Login'
 
 
 function Blogg() {
+
+    const [login, setLogin] = useState({ //useState for login data (username and password)
+        userName: "",
+        password: "",
+      });
+    const [isLoggedIn, setIsLoggedIn] = useState(false); //useState for successfull login
+
+    const handleFieldChange = (fieldName, fieldValue) => { //Login data is set to what comes from the form
+        setLogin({ ...login, [fieldName]: fieldValue });
+      };
+
+    const handleSubmit = (e) => { //When form is submitted and username and password are correct login is set to true
+        e.preventDefault();
+        if (
+          login.userName === "admin" &&
+          login.password === "password"
+        ) {
+          setLogin({
+            userName: "",
+            password: "",
+          });
+          setIsLoggedIn(true);
+        }
+      };
+    
+      useEffect(() => { //Log in (true/false) is saved in local storage 
+        localStorage.setItem("Logged in", JSON.stringify([isLoggedIn]));
+      }, [isLoggedIn]);
+    
+     //Login component med props (login, change and submit methods)
+
+    
+
   return (
     <div>
         <div>
             <h1>Läs nyheter från bostadsmarkanden</h1>
         </div>
         <div className='d-flex justify-content-end'>
-            <Login></Login>
+            <Login loginData={login} onChange={handleFieldChange} submit={handleSubmit}></Login>
         </div>
         <Section className={"row"}>
             <div className='col-3 h-100'><img className='blogg-pic' src="/bild/house.jpg" alt="" /></div>
