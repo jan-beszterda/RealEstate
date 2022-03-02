@@ -3,10 +3,14 @@ import React, {useState, useEffect} from 'react'
 import Section from './Section'
 import Button from './Button'
 import Login from './Login'
-
+import CreateBlogg from './CreateBlogg'
 
 function Blogg() {
 
+    
+
+    const [buttonPopup, setButtonPopup] = useState(false);
+    
     const [login, setLogin] = useState({ //useState for login data (username and password)
         userName: "",
         password: "",
@@ -16,13 +20,15 @@ function Blogg() {
     const handleFieldChange = (fieldName, fieldValue) => { //Login data is set to what comes from the form
         setLogin({ ...login, [fieldName]: fieldValue });
       };
+      
 
     const handleSubmit = (e) => { //When form is submitted and username and password are correct login is set to true
         e.preventDefault();
         if (
           login.userName === "admin" &&
           login.password === "password"
-        ) {
+        ) 
+        {
           setLogin({
             userName: "",
             password: "",
@@ -35,17 +41,21 @@ function Blogg() {
         localStorage.setItem("Logged in", JSON.stringify([isLoggedIn]));
       }, [isLoggedIn]);
     
-     //Login component med props (login, change and submit methods)
-
-    
 
   return (
     <div>
+      <div>
+        <Button className="btn btn-primary mb-4" onClick={() => setButtonPopup(true)}>
+          Skapa Artikel
+        </Button>
+        <CreateBlogg trigger={buttonPopup} setTrigger={setButtonPopup}></CreateBlogg>
+
+      </div>
         <div>
             <h1>Läs nyheter från bostadsmarkanden</h1>
         </div>
         <div className='d-flex justify-content-end'>
-            <Login loginData={login} onChange={handleFieldChange} submit={handleSubmit}></Login>
+          <Login loginData={login} onChange={handleFieldChange} submit={handleSubmit}></Login> 
         </div>
         <Section className={"row"}>
             <div className='col-3 h-100'><img className='blogg-pic' src="/bild/house.jpg" alt="" /></div>
