@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import Homepage from "./components/Homepage";
 import ObjectPage from "./components/ObjectPage";
 import ObjectsForSale from "./components/ObjectsForSale";
 import Header from "./components/Header";
@@ -31,6 +32,7 @@ function App() {
       <Header />
       <main id="main" className="container-fluid main py-4">
         <Routes>
+        <Route exact path="/" element={<Homepage />} />
           <Route path="/services" element={<Services />} />
           <Route
             path="/forsale"
