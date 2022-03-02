@@ -57,46 +57,35 @@ const ContactUs = () => {
   }, [contacts]);
 
   return (
-    <>
+    <div className="container-sm">
       {success && (
         <div className="overlay">
-          <span className="text-center">Thank you for your message</span>
+          <span className="text-center">Tack för ditt meddelande!</span>
         </div>
       )}
       <div className="row mb-4">
         <h2 className="text-center">Kontakta oss</h2>
       </div>
-      <div className="row justify-content-center">
-        <Section
-          className={
-            "col-2 d-flex flex-column justify-content-center align-self-center"
-          }
-        >
-          <FontAwesomeIcon icon={faMapLocationDot} className="fa-3x mb-3" />
-          <p className="text-center">Hej</p>
-          <p className="text-center">Hej</p>
-        </Section>
-        <div className="w-100 d-block d-md-none"></div>
-        <Section
-          className={
-            "col-2 d-flex flex-column justify-content-center align-self-center"
-          }
-        >
-          <FontAwesomeIcon icon={faPhone} className="fa-3x mb-3" />
-          <p className="text-center">Hej</p>
-          <p className="text-center">Hej</p>
-        </Section>
-        <div className="w-100 d-block d-md-none"></div>
-        <Section
-          className={
-            "col-2 d-flex flex-column justify-content-center align-self-center"
-          }
-        >
-          <FontAwesomeIcon icon={faEnvelope} className="fa-3x mb-3" />
-          <p className="text-center">Hej</p>
-          <p className="text-center">Hej</p>
-        </Section>
-        <div className="w-100 d-block d-md-none"></div>
+      <div className="row row-cols-1 row-cols-md-2">
+        <div className="col align-self-center">
+          <div className="row row-cols-1 row-cols-md-3 justify-content-center align-content-center">
+            <Section className={"col d-flex flex-column"}>
+              <FontAwesomeIcon icon={faMapLocationDot} className="fa-3x mb-3" />
+              <p className="text-center">Real Estate AB Huvudkontor</p>
+              <p className="text-center">Kungsholmsgatan 31, 104 20 Göteborg</p>
+            </Section>
+            <Section className={"col d-flex flex-column"}>
+              <FontAwesomeIcon icon={faPhone} className="fa-3x mb-3" />
+              <p className="text-center">Real Estate AB Huvudkontor</p>
+              <p className="text-center">08-65 45 21 00</p>
+            </Section>
+            <Section className={"col d-flex flex-column"}>
+              <FontAwesomeIcon icon={faEnvelope} className="fa-3x mb-3" />
+              <p className="text-center">Real Estate AB Huvudkontor</p>
+              <p className="text-center">info@realestate.se</p>
+            </Section>
+          </div>
+        </div>
         <div className="col d-flex flex-column justify-content-center">
           <ContactForm
             data={contact}
@@ -105,7 +94,7 @@ const ContactUs = () => {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
