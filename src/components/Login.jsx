@@ -1,45 +1,41 @@
-import React, {useState, useEffect} from 'react'
-import Button from './Button'
-
+import Button from "./Button";
 
 const Login = (props) => {
+  const handleChange = (e) => {
+    props.onChange(e.target.name, e.target.value);
+  };
 
-    const handleChange = (e) => {
-        props.onChange(e.target.name, e.target.value); //Local onChange method calls onChange method passed through props
-      };
-    
   return (
-    <>
-    {/* {handleSubmit && !value.userName ? <span className="username-enter"></span> : null}
-    {handleSubmit && !value.password ? <span className="password-enter"></span> : null}
-     {submitet ? <div className="succses-msg"> Logged In</div> : null} */}
-     
+    <form className="d-flex justify-content-end" onSubmit={props.submit}>
+      <div className="login-container row row-cols-1 row-cols-md-3 align-items-center p-2">
+        <div className="col-md-auto p-2">
+          <input
+            className="form-control"
+            type="text"
+            name="userName"
+            placeholder="Användarnamn"
+            value={props.loginData.userName}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="col-md-auto p-2">
+          <input
+            className="form-control"
+            type="password"
+            name="password"
+            placeholder="Lösenord"
+            value={props.loginData.password}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="col-md-auto p-2">
+          <Button className="btn btn-primary" type="submit">
+            Logga in
+          </Button>
+        </div>
+      </div>
+    </form>
+  );
+};
 
-     <div className="login-container">
-     <form onSubmit = {props.submit}>
-
-       <span className='line'>
-
-     <div className='test'>
-     <input type="text" className="username-input" name="userName" placeholder='Användarnamn' value={props.loginData.userName} onChange={handleChange}/>
-     </div>
-
-     <div className='test'>
-     <input type="text" className="password-input" name="password" placeholder='Lösenord' value={props.loginData.password} onChange={handleChange}/>
-     </div>
-
-     <Button className="btn btn-primary" type="submit">
-          Logga in
-        </Button> 
-
-        </span>  
-
-     </form>
-     </div>
-   </>
-
-   
-  )
-}
-
-export default Login
+export default Login;

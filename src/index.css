@@ -203,67 +203,8 @@ footer > div > p {
 }
 
 .login-container {
-  position: absolute;
-  width: 588px;
-  height: 70px;
-  left: 832px;
-  top: 163px;
-
-  background: #d3d3d3;
-  border-radius: 10px;
-}
-
-.username-input {
-  position: relative;
-  width: 142px;
-  height: 33.8px;
-  left: 95px;
-  top: 20px;
-
-  background: #fff;
-  border: 1px solid #d3d3d3;
-  box-sizing: border-box;
-  border-radius: 15px;
-}
-
-.login-username {
-  position: relative;
-  left: 10px;
-  top: -10px;
-  height: 30px;
-  width: 10px;
-}
-
-.password-input {
-  position: relative;
-  width: 142px;
-  height: 33.8px;
-  left: 330px;
-  top: -60px;
-
-  background: #fff;
-  border: 1px solid #d3d3d3;
-  box-sizing: border-box;
-  border-radius: 15px;
-}
-
-.login-password {
-  position: relative;
-  left: 250px;
-  top: -90px;
-  height: 30px;
-  width: 10px;
-}
-
-.login-btn {
-  position: absolute;
-  width: 66.54px;
-  height: 33.8px;
-  left: 510px;
-  top: 20px;
-
-  background: #baa360;
-  border-radius: 15px;
+  background-color: #d3d3d3;
+  border-radius: 5px;
 }
 
 .overlay {
@@ -290,51 +231,8 @@ footer > div > p {
   border-color: #baa360;
 }
 
-
 .blogg-pic {
-  width: 100%;
-  max-width: 345px;
-  max-height: 166px;
-}
-
-.login-container {
-  background: #d3d3d3;
-  padding: 4px;
-  border-radius: 15px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.username-input {
-  background: #fff;
-  border: 1px solid #d3d3d3;
-  box-sizing: border-box;
-  border-radius: 15px;
-  text-align: center;
-}
-
-.password-input {
-}
-
-.login-username {
-  position: relative;
-  left: 10px;
-  top: -10px;
-  height: 30px;
-  width: 10px;
-}
-
-.password-input {
-  position: relative;
-  width: 142px;
-  height: 33.8px;
-  left: 330px;
-  top: -60px;
-  background: #fff;
-  border: 1px solid #d3d3d3;
-  box-sizing: border-box;
-  border-radius: 15px;
-  text-align: center;
+  border-radius: 5px;
 }
 
 .succses-msg {
