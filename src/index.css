@@ -49,15 +49,11 @@ header {
   outline: 0 !important;
 }
 
-.section-home { 
-  position: relative; 
-  top: 50px; 
-  border-radius: 15px; 
-  background: #ffffff; 
-  opacity: 65%; 
-  margin: auto; 
-  padding: 20px;  
-  text-align: justify; 
+.section-home {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .section-about {
@@ -83,7 +79,11 @@ p {
 }
 
 .main-image {
-  background: url("../public/logo512.png") no-repeat scroll center center !important;
+  background-image: url("../public/graphics/empty-flat-interrior-with-elements-decoration.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
 }
 
 footer {
@@ -308,7 +308,7 @@ footer > div > p {
 }
 
 .header-image {
-  max-height: 70px;
+  max-height: 60px;
 }
 
 .about-container {
@@ -320,17 +320,16 @@ footer > div > p {
   height: auto;
 }
 
-.main { 
-  background-color: #fffffe !important; 
-} 
+.main {
+  background-color: #fffffe !important;
+}
 
-.main-image { 
+/* .main-image { 
   background: url("../public/images/flat-interrior.jpg") no-repeat scroll center center !important; 
   height: 500px; 
   background-size: cover; 
   position: relative; 
-} 
-
+}  */
 
 @media only screen and (max-width: 767px) {
   #nav-container {
