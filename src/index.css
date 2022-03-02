@@ -78,13 +78,13 @@ p {
   background-color: #fffffe !important;
 }
 
-/* .main-image {
+.main-image {
   background-image: url("../public/graphics/empty-flat-interrior-with-elements-decoration.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
-} */
+}
 
 footer {
   background-color: #d3d3d3 !important;
