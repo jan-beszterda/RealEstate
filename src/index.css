@@ -49,12 +49,12 @@ header {
   outline: 0 !important;
 }
 
-.section-home {
+/* .section-home {
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
+} */
 
 .section-about {
   text-align: center;
