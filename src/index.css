@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 body {
@@ -11,14 +13,87 @@ body {
   font-size: 1rem;
 }
 
+/* header {
+  background-color: #d3d3d3;
+  display: flex;
+  flex-direction: column;
+  
+} */
+
+.logo {
+  width: 70px;
+  height: auto;
+}
+
+#nav-container {
+  flex-direction: column;
+}
+
+header {
+  background-color: #d3d3d3;
+  margin-top: 5px;
+}
+
+.navbar-toggler {
+  border: none !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:active,
+.navbar-toggler:visited,
+.navbar-toggler:focus {
+  border: none !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+
+.section-home {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section-about {
+  text-align: center;
+}
+
+/* nav {
+  margin: -12px;
+}
+
+h1,
+p {
+  padding-top: 20px;
+} */
+
+#root {
+  background-color: #baa360;
+  overflow: auto;
+}
+
+.main {
+  background-color: #fffffe !important;
+}
+
+.main-image {
+  background-image: url("../public/graphics/empty-flat-interrior-with-elements-decoration.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+
 footer {
   background-color: #d3d3d3 !important;
-  max-height: 100px !important;
-  font-size: 0.6rem !important;
+  font-size: 1rem;
+  margin-bottom: 5px;
 }
 
 footer > div > p {
-  font-size: 0.4rem !important;
+  font-size: 0.8rem !important;
   letter-spacing: 1px !important;
 }
 
@@ -35,6 +110,12 @@ footer > div > p {
 .section-grey {
   background-color: rgba(211, 211, 211, 0.75);
   border-radius: 15px;
+}
+
+.btn-icon {
+  background-color: #fffffe;
+  border: none;
+  outline: none;
 }
 
 .btn-primary {
@@ -64,6 +145,23 @@ footer > div > p {
   border-radius: 15px;
 }
 
+.booking-form {
+  background-color: #d3d3d3;
+  padding: 30px;
+}
+
+.service-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-paraContainer {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
 .form-control:focus {
   border: 2px solid #baa360 !important;
   box-shadow: none !important;
@@ -76,62 +174,118 @@ footer > div > p {
   align-content: center;
   align-items: center;
   height: 30vh;
-  width: 30vw;
-  background-color: rgba(211, 211, 211, 0.8);
+  width: 50vh;
+  margin: auto;
+  background-color: rgba(211, 211, 211);
   border-radius: 15px;
-  position: relative;
-  top: -50%;
-  left: -50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  cursor: pointer;
 }
 
 .card {
-  max-width: 18rem;
+  max-width: 25rem;
   border-color: #baa360;
 }
 
+.card-img-top {
+  max-width: 100%;
+  height: auto;
+  max-height: 15rem;
+}
+
+.object-image {
+  max-width: 100%;
+  height: auto;
+}
+
 .login-container {
-  position: absolute;
-  width: 588px;
-  height: 70px;
-  left: 632px;
-  top: 163px;
-
-  background: #d3d3d3;
-  border-radius: 10px;
+  background-color: #d3d3d3;
+  border-radius: 5px;
 }
 
-.username-input {
-  position: relative;
-  width: 142px;
-  height: 33.8px;
-  left: 95px;
-  top: 20px;
-
-  background: #fff;
-  border: 1px solid #d3d3d3;
-  box-sizing: border-box;
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 50vh;
+  margin: auto;
+  background-color: rgba(211, 211, 211, 0.8);
   border-radius: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  cursor: pointer;
 }
 
-.login-username {
-  position: relative;
-  left: 10px;
-  top: -10px;
-  height: 30px;
-  width: 10px;
+.card {
+  max-width: 20rem;
+  border-color: #baa360;
 }
 
-.password-input {
-  position: relative;
-  width: 142px;
-  height: 33.8px;
-  left: 330px;
-  top: -60px;
+.blogg-pic {
+  border-radius: 5px;
+}
 
-  background: #fff;
-  border: 1px solid #d3d3d3;
-  box-sizing: border-box;
+.succses-msg {
+  color: green;
+}
+
+.test {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 10px;
+  padding: 2px;
+}
+
+.line {
+  display: flex;
+  flex-direction: row;
+}
+
+.line > button {
+  margin: 8px;
+}
+
+.create {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
   border-radius: 15px;
+  background-color: rgba(211, 211, 211, 0.75);
+}
+
+.create label {
+  text-align: left;
+  display: block;
+}
+
+.create h2 {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 30px;
+}
+
+.create input,
+.create textarea,
+.create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #d3d3d3;
+  border-radius: 15px;
+  box-sizing: border-box;
+  display: block;
 }
 
 .login-password {
@@ -153,69 +307,32 @@ footer > div > p {
   border-radius: 15px;
 }
 
-.logout-btn {
-  position: absolute;
-  width: 66.54px;
-  height: 33.8px;
-  left: 910px;
-  top: 100px;
-
-  background: #baa360;
-  border-radius: 15px;
+.header-image {
+  max-height: 60px;
 }
 
-.username-enter {
+.about-container {
   position: relative;
-  left: 750px;
-  top: 110px;
-  background: red;
-}
-.password-enter {
-  position: relative;
-  left: 850px;
-  top: 110px;
-  background: red;
 }
 
-.succses-msg {
-  position: relative;
-  left: 950px;
-  top: 220px;
-  color: green;
+.about-image {
+  width: 100%;
+  height: auto;
 }
 
-.filter-container {
-  position: relative;
-  width: 223px;
-  height: 700px;
-  left: -80px;
-  top: 15px;
-  background-color: #d3d3d3;
+.main {
+  background-color: #fffffe !important;
 }
 
-.close-filter {
-  position: relative;
-  left: 170px;
-  top: -10px;
-}
+/* .main-image { 
+  background: url("../public/images/flat-interrior.jpg") no-repeat scroll center center !important; 
+  height: 500px; 
+  background-size: cover; 
+  position: relative; 
+}  */
 
-.filter-header {
-  position: relative;
-  top: 25px;
-  left: 25px;
-}
-
-.filter-list li {
-  list-style-type: none;
-  margin: 15px;
-  position: relative;
-  left: -10px;
-}
-
-.price-slider {
-  -webkit-appearance: none;
-  width: 85%;
-  outline: none;
-  border-radius: 12px;
-  box-shadow: 0px, 1px, 10px, 1px;
+@media only screen and (max-width: 767px) {
+  #nav-container {
+    flex-direction: row;
+  }
 }
