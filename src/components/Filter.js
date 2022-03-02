@@ -1,79 +1,162 @@
-import React, {useState} from 'react'
-import {RiBarChartHorizontalFill} from 'react-icons/ri'
-import {AiFillCloseCircle} from 'react-icons/ai'
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
-function Filter() {
+import Button from "./Button";
 
-const [Open, setOpen] = useState(false)
-const [Close, SetClose] = useState(true)
-const [value, setValue] = useState(0)
+const Filter = (props) => {
+  const close = () => {
+    props.close();
+  };
 
+  const handleChange = (e) => {
+    props.onChange(e.target.name, e.target.value);
+  };
 
-var [state, setState] = useState({
-  price : 1,
-  area : 1,
-  rooms : 1,
-  bathrooms : 1
-})
+  const reset = () => {
+    props.reset();
+  };
 
-const handlePriceSlider = (event) =>{
-  setState ({price : event.target.value})
-}
-
-const handleAreaSlider = (event) =>{
-  setState ({area : event.target.value})
-}
-const handleRoomSlider = (event) =>{
-  setState ({rooms : event.target.value})
-}
-
-const handleBathRoomSlider = (event) =>{
-  setState ({bathrooms : event.target.value})
-}
-
-
- const openHandler  = (event) =>{
-   console.log("Open the menu")
-    setOpen({open : true})
-  }
-
+  const submit = (e) => {
+    e.preventDefault();
+    props.submit();
+  };
 
   return (
-    <div>
-    {!Open ? <RiBarChartHorizontalFill size="2rem" onClick={openHandler} className="open-filter"/> : null }
-    {Open ?<div className="filter-container"> 
-    <h5 className="filter-header">Filter</h5>
-    <AiFillCloseCircle size="2rem" className="close-filter"/>
-   <ul className="filter-list">
-   <li>Price <span id="price-range-value">{state.price}</span></li>
-   <div class="slidecontainer">
+    <form className="contact-form my-4 p-3" onSubmit={submit}>
+      <div className="row justify-content-end">
+        <div className="col-1 text-center">
+          <Button className={"btn-icon"} type={"button"} onClick={close}>
+            <FontAwesomeIcon icon={faXmark} className="fa-2x" />
+          </Button>
+        </div>
+      </div>
+      <div className="row row-cols-1 row-cols-md-6 align-items-end">
+        <div className="col">
+          <label className="form-label" htmlFor="price">
+            Pris
+          </label>
+          <input
+            className="form-control mb-2"
+            type="number"
+            name="minPrice"
+            placeholder="Min pris"
+            min="100000"
+            max="15000000"
+            step={"10000"}
+            value={props.data.minPrice}
+            onChange={handleChange}
+          />
+          <input
+            className="form-control"
+            type="number"
+            name="maxPrice"
+            placeholder="Max pris"
+            min="100000"
+            max="15000000"
+            step={"5000"}
+            value={props.data.maxPrice}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="col">
+          <label className="form-label" htmlFor="rooms">
+            Rum
+          </label>
+          <input
+            className="form-control mb-2"
+            type="number"
+            name="minRooms"
+            placeholder="Min rum"
+            min="1"
+            max="10"
+            step={"1"}
+            value={props.data.minRooms}
+            onChange={handleChange}
+          />
+          <input
+            className="form-control"
+            type="number"
+            name="maxRooms"
+            placeholder="Max rum"
+            min="1"
+            max="10"
+            step={"1"}
+            value={props.data.maxRooms}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="col">
+          <label className="form-label" htmlFor="bathrooms">
+            Badrum
+          </label>
+          <input
+            className="form-control mb-2"
+            type="number"
+            name="minBathrooms"
+            placeholder="Min badrum"
+            min="1"
+            max="5"
+            step={"1"}
+            value={props.data.minBathrooms}
+            onChange={handleChange}
+          />
+          <input
+            className="form-control"
+            type="number"
+            name="maxBathrooms"
+            placeholder="Max badrum"
+            min="1"
+            max="5"
+            step={"1"}
+            value={props.data.maxBathrooms}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="col">
+          <label className="form-label" htmlFor="area">
+            Boarea
+          </label>
+          <input
+            className="form-control mb-2"
+            type="number"
+            name="minArea"
+            placeholder="Min boarea"
+            min="25"
+            max="250"
+            step={"1"}
+            value={props.data.minArea}
+            onChange={handleChange}
+          />
+          <input
+            className="form-control"
+            type="number"
+            name="maxArea"
+            placeholder="Max boarea"
+            min="25"
+            max="250"
+            step={"1"}
+            value={props.data.maxArea}
+            onChange={handleChange}
+          />
+        </div>
+        <div className="col text-center">
+          <Button className={"btn btn-primary btn-lg"} type={"submit"}>
+            Filtrera
+          </Button>
+        </div>
+        <div className="col text-center">
+          <Button
+            className={"btn btn-dark btn-lg shadow-none"}
+            type={"reset"}
+            onClick={reset}
+          >
+            Återställ
+          </Button>
+        </div>
+      </div>
+    </form>
+  );
+};
 
-  <input type="range" min="1" max="1000000"   class="price-slider" id="price-range" onChange={handlePriceSlider}></input>
-  
-
-   <li>Area <span id="area-range-value">{state.area}</span></li>
-
-  <input type="range" min="1" max="100"class="area-slider" id="area-range" onChange={handleAreaSlider}></input>
-   
-   <li>Rooms <span id="room-range-value">{state.rooms}</span></li>
-   
-  <input type="range" min="1" max="100"  class="room-slider" id="room-range" onChange={handleRoomSlider}></input>
-   
-   <li>Bathrooms <span id="bathroom-range-value">{state.bathrooms}</span></li>
-
-  <input type="range" min="1" max="100"  class="bathroom-slider" id="bathroom-range" onChange={handleBathRoomSlider}></input>
-  
-</div>
-   
-   </ul>
-
-
-    </div> : null}
-    </div>
-  )
-}
-
-export default Filter 
-
-// I denna komponent vill jag kunna skapa en filter meny som först syns som en burger meny för att sedan under ett event 
-// kunna visa alla meny val som finns samt kunna redirecta användaren till en ny sida. Jag tänker att knapp trycket är en boolean och ges ett start värde av false, värdet ändras till true vid ett knapp tryck och en "gömd" design struktur visas upp för användaren
+export default Filter;
