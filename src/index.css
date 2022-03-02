@@ -193,6 +193,11 @@ footer > div > p {
   display: block;
 }
 
+.closePopup-btn {
+  position: relative;
+  left: 150px;
+}
+
 .filter-container {
   position: relative;
   width: 223px;

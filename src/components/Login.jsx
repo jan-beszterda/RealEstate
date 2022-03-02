@@ -2,13 +2,14 @@ import React, {useState, useEffect} from 'react'
 import Button from './Button'
 
 
+
 const Login = (props) => {
 
     const handleChange = (e) => {
         props.onChange(e.target.name, e.target.value); //Local onChange method calls onChange method passed through props
       };
     
-  return (
+  return ( 
     <>
     {/* {handleSubmit && !value.userName ? <span className="username-enter"></span> : null}
     {handleSubmit && !value.password ? <span className="password-enter"></span> : null}
@@ -28,10 +29,8 @@ const Login = (props) => {
      <input type="text" className="password-input" name="password" placeholder='Lösenord' value={props.loginData.password} onChange={handleChange}/>
      </div>
 
-     <Button className="btn btn-primary" type="submit">
-          Logga in
-        </Button> 
-
+     <Button className="btn btn-primary" type="submit" > Logga in </Button> 
+        
         </span>  
 
      </form>
