@@ -3,8 +3,11 @@ import { useState, useEffect } from "react";
 import Section from "./Section";
 import Button from "./Button";
 import Login from "./Login";
+import CreateBlogg from "./CreateBlogg";
 
 function Blogg() {
+const [buttonPopup, setButtonPopup] = useState(false);
+  
   const [login, setLogin] = useState({
     userName: "",
     password: "",
@@ -32,6 +35,13 @@ function Blogg() {
 
   return (
     <div className="container-sm">
+      <div>
+        <Button className="btn btn-primary mb-4" onClick={() => setButtonPopup(true)}>
+          Skapa Artikel
+        </Button>
+        <CreateBlogg trigger={buttonPopup} setTrigger={setButtonPopup}></CreateBlogg>
+
+      </div>
       <Login
         loginData={login}
         onChange={handleFieldChange}

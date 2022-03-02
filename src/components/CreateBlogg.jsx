@@ -2,14 +2,16 @@ import { useState } from "react";
 import React from 'react'
 import Button from "./Button";
 
-function CreateBlogg() {
+function CreateBlogg(props) {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
     const [url, setUrl] = useState('');
 
 
-  return (
+  return (props.trigger) ? (
     <div className="create">
+
+    <button className="closePopup-btn" onClick={() => props.setTrigger(false)}>close</button>
         <h2>Skapa nytt inlägg</h2>
         <form>
             <label>Rubrik</label>
@@ -34,9 +36,10 @@ function CreateBlogg() {
             />
             
             <Button className="btn btn-primary mb-4 ms-2">Skapa inlägg</Button>
+            {props.children}
         </form>
     </div>
-  )
+  ) : "";
 }
 
 export default CreateBlogg
