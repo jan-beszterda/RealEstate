@@ -49,14 +49,15 @@ header {
   outline: 0 !important;
 }
 
-.section-home {
-  position: relative;
-  top: 50px;
-  border-radius: 15px;
-  background: pink;
-  margin: auto;
-  padding: 20px;
-  text-align: justify;
+.section-home { 
+  position: relative; 
+  top: 50px; 
+  border-radius: 15px; 
+  background: #ffffff; 
+  opacity: 65%; 
+  margin: auto; 
+  padding: 20px;  
+  text-align: justify; 
 }
 
 .section-about {
@@ -319,9 +320,17 @@ footer > div > p {
   height: auto;
 }
 
-/*.home-image {
- background-image: url(/public/images/apartment.jpg);
-  }*/
+.main { 
+  background-color: #fffffe !important; 
+} 
+
+.main-image { 
+  background: url("../public/images/flat-interrior.jpg") no-repeat scroll center center !important; 
+  height: 500px; 
+  background-size: cover; 
+  position: relative; 
+} 
+
 
 @media only screen and (max-width: 767px) {
   #nav-container {
