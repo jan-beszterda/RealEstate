@@ -24,7 +24,7 @@ const Footer = () => {
           </li>
           <span>&middot;</span>
           <li className="nav-item">
-            <Link to="/" className="nav-link px-2">
+            <Link to="/about" className="nav-link px-2">
               Om oss
             </Link>
           </li>

@@ -60,7 +60,7 @@ const ContactUs = () => {
     <div className="container-sm">
       {success && (
         <div className="overlay">
-          <span className="text-center">Tack för ditt meddelande!</span>
+          <h3 className="text-center">Tack för ditt meddelande!</h3>
         </div>
       )}
       <div className="row mb-4">
