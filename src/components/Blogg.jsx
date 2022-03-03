@@ -5,11 +5,8 @@ import Section from "./Section";
 import Button from "./Button";
 import Login from "./Login";
 import CreateBlogg from "./CreateBlogg";
-import {v4 as uuidv4} from "uuid"
-
 
 function Blogg() {
-
   const [buttonPopup, setButtonPopup] = useState(false);
 
   const [login, setLogin] = useState({
@@ -118,7 +115,6 @@ function Blogg() {
 
   return (
     <div className="container-sm">
-
       <div className="mb-4">
         {loginComponent}
         <CreateBlogg
@@ -129,11 +125,9 @@ function Blogg() {
           setTrigger={setButtonPopup}
         ></CreateBlogg>
       </div>
-
       <div className="row mb-4">
         <h1>Läs nyheter från bostadsmarkanden</h1>
       </div>
-
       {articles.map((article, index) => (
         <Section
           key={index}
@@ -149,23 +143,13 @@ function Blogg() {
           </div>
         </Section>
       ))}
-
-      <Section className={"section-grey row row-cols-1 row-cols-md-2 mb-4 p-3"}>
-        <div className="col-md-4">
-          <img className="blogg-pic img-fluid" src={article.url} alt="" />
-        </div>
-        <div className="col-md-8 mt-3 mt-md-0">
-          <h3>{article.title}</h3>
-          <p>
-            {article.text}
-          </p>
-          <Button className="btn btn-primary btn-lg">Läs mer</Button>
-          </div>
-          </Section>))}
-      
       <Section className={"section-grey row row-cols-1 row-cols-md-2 mb-4 p-4"}>
         <div className="col-md-4">
-          <img className="blogg-pic img-fluid" src="/images/Towers.jpg" alt="" />
+          <img
+            className="blogg-pic img-fluid"
+            src="/images/Towers.jpg"
+            alt=""
+          />
         </div>
         <div className="col-md-8 mt-3 mt-md-0">
           <h3>Vacker utsikt men höga priser</h3>
@@ -181,7 +165,11 @@ function Blogg() {
       </Section>
       <Section className={"section-grey row row-cols-1 row-cols-md-2 mb-4 p-4"}>
         <div className="col-md-4">
-          <img className="blogg-pic img-fluid" src="/images/Greece.jpg" alt="" />
+          <img
+            className="blogg-pic img-fluid"
+            src="/images/Greece.jpg"
+            alt=""
+          />
         </div>
         <div className="col-md-8 mt-3 mt-md-0">
           <h3>Vart i Grekland ska jag köpa bostad?</h3>
@@ -197,7 +185,11 @@ function Blogg() {
       </Section>
       <Section className={"section-grey row row-cols-1 row-cols-md-2 mb-4 p-4"}>
         <div className="col-md-4">
-          <img className="blogg-pic img-fluid" src="/images/Castle2.jpg" alt="" />
+          <img
+            className="blogg-pic img-fluid"
+            src="/images/Castle2.jpg"
+            alt=""
+          />
         </div>
         <div className="col-md-8 mt-3 mt-md-0">
           <h3>Har du någonsin velat äga ett slott?</h3>
