@@ -62,12 +62,19 @@ header {
 }
 
 .main-image {
-  background-image: url("../public/graphics/empty-flat-interrior-with-elements-decoration.jpg");
+  background-image: url("../public/images/living-room.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
 }
+
+/* .main-image { 
+  background: url("../public/images/living-room.jpg") no-repeat scroll center center !important; 
+  height: 500px; 
+  background-size: auto; 
+  position: relative; 
+} */
 
 footer {
   background-color: #d3d3d3 !important;
@@ -221,6 +228,15 @@ footer > div > p {
   border-radius: 15px;
   box-sizing: border-box;
   display: block;
+}
+
+.about-container {
+  position: relative;
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
 }
 
 @media only screen and (max-width: 767px) {
