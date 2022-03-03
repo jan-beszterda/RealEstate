@@ -4,8 +4,39 @@ import Section from "./Section";
 import Button from "./Button";
 import Login from "./Login";
 import CreateBlogg from "./CreateBlogg";
+import {v4 as uuidv4} from "uuid"
+
 
 function Blogg() {
+
+  const [article, setArticle] = useState({
+    title: "",
+    text: "",
+    url: "",
+  });
+
+  const [articles, setArticles] = useState([]);
+  const handleArticelFieldChange = (fieldName, fieldValue) => {
+    setArticle({ ...article, [fieldName]: fieldValue });
+  };
+
+  const handleArticelSubmit = (e) => {
+    e.preventDefault();
+    if (
+      article.title &&
+      article.text &&
+      article.url ) {
+      const newArticle = { ...article, id: uuidv4() };
+      setArticles([...articles, newArticle]);
+      setArticle({
+        title: "",
+        text: "",
+        url: "",
+      });
+    }
+  };
+
+
 const [buttonPopup, setButtonPopup] = useState(false);
   
   const [login, setLogin] = useState({
@@ -41,15 +72,33 @@ const [buttonPopup, setButtonPopup] = useState(false);
         </Button>
         <CreateBlogg trigger={buttonPopup} setTrigger={setButtonPopup}></CreateBlogg>
 
+        <Button className="btn btn-primary mb-4">Logga ut</Button>
+
       </div>
       <Login
         loginData={login}
         onChange={handleFieldChange}
         submit={handleSubmit}
       />
+
       <div className="row mb-4">
         <h1>Läs nyheter från bostadsmarkanden</h1>
       </div>
+      
+      {articles.map((article) => (
+      <Section className={"section-grey row row-cols-1 row-cols-md-2 mb-4 p-3"}>
+        <div className="col-md-4">
+          <img className="blogg-pic img-fluid" src={article.url} alt="" />
+        </div>
+        <div className="col-md-8 mt-3 mt-md-0">
+          <h3>{article.title}</h3>
+          <p>
+            {article.text}
+          </p>
+          <Button className="btn btn-primary btn-lg">Läs mer</Button>
+          </div>
+          </Section>))}
+      
       <Section className={"section-grey row row-cols-1 row-cols-md-2 mb-4 p-3"}>
         <div className="col-md-4">
           <img className="blogg-pic img-fluid" src="/bild/house.jpg" alt="" />
