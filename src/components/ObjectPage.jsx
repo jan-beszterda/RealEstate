@@ -88,10 +88,10 @@ const ObjectPage = ({ objects }) => {
           <img src={object.image} alt="apartment" className="img-fluid" />
           <div className="mt-2">
             <h4>{object.address}</h4>
-            <h5>Pris: {object.price}</h5>
+            <h5>Pris: {object.price} kr</h5>
             <h5>Rum: {object.rooms}</h5>
             <h5>Badrum: {object.bathrooms}</h5>
-            <h5>Boarea: {object.area}</h5>
+            <h5>Boarea: {object.area} kvm</h5>
             {text.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}

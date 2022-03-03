@@ -13,25 +13,23 @@ body {
   font-size: 1rem;
 }
 
-/* header {
-  background-color: #d3d3d3;
-  display: flex;
-  flex-direction: column;
-  
-} */
-
-.logo {
-  width: 70px;
-  height: auto;
-}
-
-#nav-container {
-  flex-direction: column;
+#root {
+  background-color: #baa360;
+  overflow: auto;
 }
 
 header {
   background-color: #d3d3d3;
   margin-top: 5px;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+#nav-container {
+  flex-direction: column;
 }
 
 .navbar-toggler {
@@ -49,33 +47,14 @@ header {
   outline: 0 !important;
 }
 
-.section-home { 
-  position: relative; 
-  top: 50px; 
-  border-radius: 15px; 
-  background: #ffffff; 
-  opacity: 65%; 
-  margin: auto; 
-  padding: 20px;  
-  text-align: justify; 
+.nav-link {
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  color: #000000 !important;
 }
 
-.section-about {
-  text-align: center;
-}
-
-/* nav {
-  margin: -12px;
-}
-
-h1,
-p {
-  padding-top: 20px;
-} */
-
-#root {
-  background-color: #baa360;
-  overflow: auto;
+.nav-link:hover {
+  text-decoration: underline !important;
 }
 
 .main {
@@ -83,8 +62,19 @@ p {
 }
 
 .main-image {
-  background: url("../public/logo512.png") no-repeat scroll center center !important;
+  background-image: url("../public/images/living-room.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
 }
+
+/* .main-image { 
+  background: url("../public/images/living-room.jpg") no-repeat scroll center center !important; 
+  height: 500px; 
+  background-size: auto; 
+  position: relative; 
+} */
 
 footer {
   background-color: #d3d3d3 !important;
@@ -97,23 +87,13 @@ footer > div > p {
   letter-spacing: 1px !important;
 }
 
-.nav-link {
-  letter-spacing: 1px !important;
-  text-transform: uppercase !important;
-  color: #000000 !important;
-}
-
-.nav-link:hover {
-  text-decoration: underline !important;
-}
-
 .section-grey {
   background-color: rgba(211, 211, 211, 0.75);
   border-radius: 15px;
 }
 
 .btn-icon {
-  background-color: #fffffe;
+  background-color: transparent;
   border: none;
   outline: none;
 }
@@ -140,26 +120,16 @@ footer > div > p {
   border: 2px solid #baa360 !important;
 }
 
+.btn-dark:hover {
+  transition-duration: 0.4s !important;
+  background-color: #fffffe !important;
+  color: #000000 !important;
+  border: 1px solid #000000 !important;
+}
+
 .contact-form {
   background-color: #d3d3d3;
   border-radius: 15px;
-}
-
-.booking-form {
-  background-color: #d3d3d3;
-  padding: 30px;
-}
-
-.service-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.service-paraContainer {
-  display: flex;
-  justify-content: center;
-  padding: 10px;
 }
 
 .form-control:focus {
@@ -198,42 +168,14 @@ footer > div > p {
   max-height: 15rem;
 }
 
-.object-image {
-  max-width: 100%;
-  height: auto;
-}
-
 .login-container {
   background-color: #d3d3d3;
   border-radius: 5px;
 }
 
-.overlay {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  height: 50vh;
-  width: 50vh;
-  margin: auto;
-  background-color: rgba(211, 211, 211, 0.8);
-  border-radius: 15px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-  cursor: pointer;
-}
-
-.card {
-  max-width: 20rem;
-  border-color: #baa360;
-}
-
 .blogg-pic {
   border-radius: 5px;
+  max-height: 25rem;
 }
 
 .succses-msg {
@@ -288,29 +230,6 @@ footer > div > p {
   display: block;
 }
 
-.login-password {
-  position: relative;
-  left: 250px;
-  top: -90px;
-  height: 30px;
-  width: 10px;
-}
-
-.login-btn {
-  position: absolute;
-  width: 66.54px;
-  height: 33.8px;
-  left: 510px;
-  top: 20px;
-
-  background: #baa360;
-  border-radius: 15px;
-}
-
-.header-image {
-  max-height: 70px;
-}
-
 .about-container {
   position: relative;
 }
@@ -319,18 +238,6 @@ footer > div > p {
   width: 100%;
   height: auto;
 }
-
-.main { 
-  background-color: #fffffe !important; 
-} 
-
-.main-image { 
-  background: url("../public/images/living-room.jpg") no-repeat scroll center center !important; 
-  height: 500px; 
-  background-size: auto; 
-  position: relative; 
-} 
-
 
 @media only screen and (max-width: 767px) {
   #nav-container {
