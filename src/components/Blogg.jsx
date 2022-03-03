@@ -37,7 +37,7 @@ function Blogg() {
         onChange={handleFieldChange}
         submit={handleSubmit}
       />
-      <div className="row mb-4">
+      <div className="row my-4">
         <h1>Läs nyheter från bostadsmarkanden</h1>
       </div>
       <Section className={"section-grey row row-cols-1 row-cols-md-2 mb-4 p-3"}>
