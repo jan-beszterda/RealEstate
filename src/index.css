@@ -325,9 +325,9 @@ footer > div > p {
 } 
 
 .main-image { 
-  background: url("../public/images/flat-interrior.jpg") no-repeat scroll center center !important; 
+  background: url("../public/images/living-room.jpg") no-repeat scroll center center !important; 
   height: 500px; 
-  background-size: cover; 
+  background-size: auto; 
   position: relative; 
 } 
 
