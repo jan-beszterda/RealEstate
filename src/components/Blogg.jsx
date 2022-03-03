@@ -99,12 +99,12 @@ const [buttonPopup, setButtonPopup] = useState(false);
           </div>
           </Section>))}
       
-      <Section className={"section-grey row row-cols-1 row-cols-md-2 mb-4 p-3"}>
+      <Section className={"section-grey row row-cols-1 row-cols-md-2 mb-4 p-4"}>
         <div className="col-md-4">
-          <img className="blogg-pic img-fluid" src="/bild/house.jpg" alt="" />
+          <img className="blogg-pic img-fluid" src="/images/Towers.jpg" alt="" />
         </div>
         <div className="col-md-8 mt-3 mt-md-0">
-          <h3>Artikel headline</h3>
+          <h3>Vacker utsikt men höga priser</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
             suscipit pretium arcu ut sollicitudin. Proin non lorem est. Sed
@@ -115,12 +115,12 @@ const [buttonPopup, setButtonPopup] = useState(false);
           <Button className="btn btn-primary btn-lg">Läs mer</Button>
         </div>
       </Section>
-      <Section className={"section-grey row row-cols-1 row-cols-md-2 mb-4 p-3"}>
+      <Section className={"section-grey row row-cols-1 row-cols-md-2 mb-4 p-4"}>
         <div className="col-md-4">
-          <img className="blogg-pic img-fluid" src="/bild/house.jpg" alt="" />
+          <img className="blogg-pic img-fluid" src="/images/Greece.jpg" alt="" />
         </div>
         <div className="col-md-8 mt-3 mt-md-0">
-          <h3>Artikel headline</h3>
+          <h3>Vart i Grekland ska jag köpa bostad?</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
             suscipit pretium arcu ut sollicitudin. Proin non lorem est. Sed
@@ -131,12 +131,12 @@ const [buttonPopup, setButtonPopup] = useState(false);
           <Button className="btn btn-primary btn-lg">Läs mer</Button>
         </div>
       </Section>
-      <Section className={"section-grey row row-cols-1 row-cols-md-2 mb-4 p-3"}>
+      <Section className={"section-grey row row-cols-1 row-cols-md-2 mb-4 p-4"}>
         <div className="col-md-4">
-          <img className="blogg-pic img-fluid" src="/bild/house.jpg" alt="" />
+          <img className="blogg-pic img-fluid" src="/images/Castle2.jpg" alt="" />
         </div>
         <div className="col-md-8 mt-3 mt-md-0">
-          <h3>Artikel headline</h3>
+          <h3>Har du någonsin velat äga ett slott?</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
             suscipit pretium arcu ut sollicitudin. Proin non lorem est. Sed

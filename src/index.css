@@ -241,6 +241,7 @@ footer > div > p {
 
 .blogg-pic {
   border-radius: 5px;
+  max-height: 25rem;
 }
 
 .succses-msg {
