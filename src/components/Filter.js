@@ -141,13 +141,13 @@ const Filter = (props) => {
           />
         </div>
         <div className="col text-center">
-          <Button className={"btn btn-primary btn-lg"} type={"submit"}>
+          <Button className={"btn btn-primary btn-lg my-2"} type={"submit"}>
             Filtrera
           </Button>
         </div>
         <div className="col text-center">
           <Button
-            className={"btn btn-dark btn-lg shadow-none"}
+            className={"btn btn-dark btn-lg shadow-none my-2"}
             type={"reset"}
             onClick={reset}
           >
