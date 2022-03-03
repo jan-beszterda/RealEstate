@@ -62,19 +62,12 @@ header {
 }
 
 .main-image {
-  background-image: url("../public/images/living-room.jpg");
+  background-image: url("../public/images/spacejoy-XpbtQfr9Skg-unsplash.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
 }
-
-/* .main-image { 
-  background: url("../public/images/living-room.jpg") no-repeat scroll center center !important; 
-  height: 500px; 
-  background-size: auto; 
-  position: relative; 
-} */
 
 footer {
   background-color: #d3d3d3 !important;
@@ -235,12 +228,14 @@ footer > div > p {
 }
 
 .about-image {
-  width: 100%;
-  height: auto;
+  max-width: 50rem;
 }
 
 @media only screen and (max-width: 767px) {
   #nav-container {
     flex-direction: row;
+  }
+  .about-image {
+    max-width: 100%;
   }
 }
