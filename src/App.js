@@ -30,9 +30,9 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <main id="main" className="container-fluid main py-4">
+      <main id="main" className="container-fluid main p-2 p-md-5">
         <Routes>
-        <Route exact path="/" element={<Homepage />} />
+          <Route exact path="/" element={<Homepage />} />
           <Route path="/services" element={<Services />} />
           <Route
             path="/forsale"
