@@ -7,8 +7,6 @@ import Login from "./Login";
 import CreateBlogg from "./CreateBlogg";
 
 function Blogg() {
-  const [buttonPopup, setButtonPopup] = useState(false);
-
   const [login, setLogin] = useState({
     userName: "",
     password: "",
@@ -16,11 +14,20 @@ function Blogg() {
   const [isLoggedIn, setIsLoggedIn] = useState(null);
   const [loginMessage, setLoginMessage] = useState("");
 
-  const handleFieldChange = (fieldName, fieldValue) => {
+  const [buttonPopup, setButtonPopup] = useState(false);
+
+  const [article, setArticle] = useState({
+    title: "",
+    text: "",
+    url: "",
+  });
+  const [articles, setArticles] = useState([]);
+
+  const handleLoginFieldChange = (fieldName, fieldValue) => {
     setLogin({ ...login, [fieldName]: fieldValue });
   };
 
-  const handleSubmit = (e) => {
+  const handleLoginSubmit = (e) => {
     e.preventDefault();
     if (login.userName === "admin" && login.password === "password") {
       setLogin({
@@ -34,21 +41,13 @@ function Blogg() {
     }
   };
 
-  const [article, setArticle] = useState({
-    title: "",
-    text: "",
-    url: "",
-  });
-
-  const [articles, setArticles] = useState([]);
-
   const handleArticleFieldChange = (fieldName, fieldValue) => {
     setArticle({ ...article, [fieldName]: fieldValue });
   };
 
   const handleArticleSubmit = (e) => {
     e.preventDefault();
-    if (article.title && article.text && article.url) {
+    if (article.title && article.text) {
       const newArticle = { ...article, id: uuidv4() };
       setArticles([newArticle, ...articles]);
       setArticle({
@@ -63,12 +62,12 @@ function Blogg() {
   const loginComponent = !isLoggedIn ? (
     <Login
       loginData={login}
-      onChange={handleFieldChange}
-      submit={handleSubmit}
+      onChange={handleLoginFieldChange}
+      submit={handleLoginSubmit}
       message={loginMessage}
     />
   ) : (
-    <div className="row justify-content-end">
+    <div className="row justify-content-end my-4">
       <div className="col-auto">
         <Button
           className="btn btn-primary btn-lg"
@@ -115,16 +114,14 @@ function Blogg() {
 
   return (
     <div className="container-sm">
-      <div className="mb-4">
-        {loginComponent}
-        <CreateBlogg
-          data={article}
-          onChange={handleArticleFieldChange}
-          submit={handleArticleSubmit}
-          trigger={buttonPopup}
-          setTrigger={setButtonPopup}
-        ></CreateBlogg>
-      </div>
+      {loginComponent}
+      <CreateBlogg
+        data={article}
+        onChange={handleArticleFieldChange}
+        submit={handleArticleSubmit}
+        trigger={buttonPopup}
+        setTrigger={setButtonPopup}
+      ></CreateBlogg>
       <div className="row mb-4">
         <h1>Läs nyheter från bostadsmarkanden</h1>
       </div>

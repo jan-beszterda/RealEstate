@@ -185,60 +185,9 @@ footer > div > p {
   max-height: 25rem;
 }
 
-.succses-msg {
-  color: green;
-}
-
-.test {
-  display: flex;
-  flex-direction: row-reverse;
-  margin: 10px;
-  padding: 2px;
-}
-
-.line {
-  display: flex;
-  flex-direction: row;
-}
-
-.line > button {
-  margin: 8px;
-}
-
-.create {
-  max-width: 400px;
+.create-article {
+  max-width: 75rem;
   margin: 0 auto;
-  text-align: center;
-  padding: 20px;
-  border-radius: 15px;
-  background-color: rgba(211, 211, 211, 0.75);
-}
-
-.create label {
-  text-align: left;
-  display: block;
-}
-
-.create h2 {
-  font-size: 20px;
-  color: black;
-  margin-bottom: 30px;
-}
-
-.create input,
-.create textarea,
-.create select {
-  width: 100%;
-  padding: 6px 10px;
-  margin: 10px 0;
-  border: 1px solid #d3d3d3;
-  border-radius: 15px;
-  box-sizing: border-box;
-  display: block;
-}
-
-.about-container {
-  position: relative;
 }
 
 .about-image {
